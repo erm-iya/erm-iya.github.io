@@ -22,7 +22,7 @@ import {
   Terminal,
   Activity,
   Video,
-  BookOpen,
+  GraduationCap,
   ExternalLink,
   Layers,
   Sparkles,
@@ -43,7 +43,7 @@ const iconMap: Record<string, React.ElementType> = {
   Terminal,
   Activity,
   Video,
-  BookOpen,
+  GraduationCap,
 };
 
 export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang }) => {
