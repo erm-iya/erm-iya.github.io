@@ -71,9 +71,10 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
           <div className="space-y-1.5 text-slate-300">
             <p className="text-teal-400 font-bold">Top Engineered Systems:</p>
             <p>1. <span className="text-white font-bold">LUXIMO Core:</span> Multi-tenant Real-time SaaS platform (Node/Mongo/Socket.io)</p>
-            <p>2. <span className="text-white font-bold">LUXIMO PcPos:</span> Direct banking terminal hardware bridge (C++/TCP)</p>
-            <p>3. <span className="text-white font-bold">IosDLmanager:</span> Mobile downloader app with liquid glass UI (React Native)</p>
-            <p>4. <span className="text-white font-bold">TTM Task Bot:</span> Autonomous Telegram task manager with Gantt charts</p>
+            <p>2. <span className="text-white font-bold">LUXIMO PcPos:</span> Direct banking terminal hardware bridge (C++/TCP Sockets)</p>
+            <p>3. <span className="text-white font-bold">Medical Curve Organizer:</span> Desktop data pipeline & analytics for patient curves (Python/Tkinter/Pandas)</p>
+            <p>4. <span className="text-white font-bold">IosDLmanager:</span> Mobile downloader app with liquid glass UI (React Native/Expo)</p>
+            <p>5. <span className="text-white font-bold">TTM Task Bot:</span> Telegram enterprise task manager with Gantt charts & aiosqlite</p>
           </div>
         );
         break;
@@ -81,11 +82,11 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
       case 'skills':
         output = (
           <div className="space-y-1 text-slate-300">
-            <p className="text-teal-400 font-bold">Core Stack:</p>
-            <p>• Node.js & Express (95%) | Socket.io (95%) | MongoDB (92%)</p>
-            <p>• Python & Asyncio (90%) | PHP (88%) | C++ / DLLs (68%)</p>
-            <p>• React & Vite (88%) | React Native / Expo (82%) | Tailwind CSS (94%)</p>
-            <p>• Telegram Bot API (98%) | Linux & cPanel Automation (90%)</p>
+            <p className="text-teal-400 font-bold">Calibrated Core Stack (Production & Project-Tested):</p>
+            <p>• Node.js & Express (90%) | Python & Data Analytics (90%) | PHP & Automation (90%)</p>
+            <p>• Socket.io (88%) | Databases: MongoDB & SQLite (85%) | C++ & POS DLL Interop (60%)</p>
+            <p>• JavaScript ES6+ (90%) | React & Vite (80%) | TypeScript (80%) | React Native (75%)</p>
+            <p>• Telegram Bots (90%) | Linux & cPanel (85%) | Photoshop (100%) | Illustrator (100%)</p>
           </div>
         );
         break;

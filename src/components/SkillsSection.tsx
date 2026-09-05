@@ -79,7 +79,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                    {skill.level}
+                    {skill.level[currentLang] || skill.level.fa}
                   </span>
                   <span className="text-xs font-mono font-bold text-teal-600 dark:text-teal-300">
                     {skill.percent}%
