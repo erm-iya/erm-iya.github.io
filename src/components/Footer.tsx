@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   };
 
   return (
-    <footer className="py-12 px-4 sm:px-8 border-t border-slate-200 dark:border-white/[0.06] relative">
+    <footer className="py-10 sm:py-12 px-3.5 sm:px-8 border-t border-slate-200 dark:border-white/[0.06] relative overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-start text-xs text-slate-500 dark:text-slate-400">
         
         <div className="flex flex-col gap-1">

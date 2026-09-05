@@ -24,7 +24,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-8 relative">
+    <section id="contact" className="py-16 sm:py-24 px-3.5 sm:px-8 relative overflow-hidden">
       
       {/* Ambient Glow */}
       <div className="ambient-glow-teal top-1/2 -start-10 w-[450px] h-[450px] opacity-10 dark:opacity-15"></div>

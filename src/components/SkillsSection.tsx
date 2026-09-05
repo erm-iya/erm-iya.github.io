@@ -22,7 +22,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
   const currentSkills = skillsData.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-8 relative">
+    <section id="skills" className="py-16 sm:py-20 px-3.5 sm:px-8 relative overflow-hidden">
       
       {/* Ambient Glow */}
       <div className="ambient-glow-emerald bottom-10 -end-10 w-[420px] h-[420px] opacity-10"></div>
@@ -30,7 +30,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
       <div className="max-w-5xl mx-auto relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.skills.title}
           </h2>
@@ -40,14 +40,14 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer select-none ${
                   activeCategory === cat.id
                     ? 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border border-teal-500/35 shadow-xs font-bold'
                     : 'bg-slate-100 dark:bg-white/[0.04] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/[0.08] border border-slate-200 dark:border-white/[0.05]'
@@ -61,11 +61,11 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
         </div>
 
         {/* Skills Grid with Serene Progress Bars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
           {currentSkills.map((skill) => (
             <div
               key={skill.name}
-              className="glass-card p-5 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 group"
+              className="glass-card p-4 sm:p-5 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">

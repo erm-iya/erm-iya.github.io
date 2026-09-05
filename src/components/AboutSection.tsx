@@ -12,7 +12,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
   const t = translations[currentLang];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-8 relative">
+    <section id="about" className="py-16 sm:py-20 px-3.5 sm:px-8 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         
         {/* Section Header */}

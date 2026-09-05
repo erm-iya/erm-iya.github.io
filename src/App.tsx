@@ -52,7 +52,7 @@ export function App() {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#080c14] text-slate-900 dark:text-slate-100 selection:bg-teal-500/25 selection:text-teal-800 dark:selection:text-teal-200 transition-colors duration-300 relative font-sans">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#080c14] text-slate-900 dark:text-slate-100 selection:bg-teal-500/25 selection:text-teal-800 dark:selection:text-teal-200 transition-colors duration-300 relative font-sans w-full max-w-full overflow-x-hidden">
       
       {/* Background Subtle Tech Mesh Grid */}
       <div 
@@ -81,7 +81,7 @@ export function App() {
       />
 
       {/* Main Sections */}
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full overflow-x-hidden">
         <HeroSection currentLang={currentLang} />
         <AboutSection currentLang={currentLang} />
         <ProjectsSection currentLang={currentLang} />
@@ -96,7 +96,7 @@ export function App() {
       {/* Floating Developer Terminal Opener */}
       <button
         onClick={() => setIsTerminalOpen(true)}
-        className="fixed bottom-6 end-6 z-40 w-12 h-12 rounded-2xl glass-card border border-slate-200 dark:border-white/10 hover:border-teal-500/40 text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 flex items-center justify-center shadow-xl hover:scale-105 transition-all cursor-pointer group"
+        className="fixed bottom-4 end-4 sm:bottom-6 sm:end-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl glass-card border border-slate-200 dark:border-white/10 hover:border-teal-500/40 text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 flex items-center justify-center shadow-xl hover:scale-105 transition-all cursor-pointer group"
         title="Open Developer Console (Terminal)"
       >
         <TerminalIcon className="w-5 h-5 group-hover:rotate-6 transition-transform" />

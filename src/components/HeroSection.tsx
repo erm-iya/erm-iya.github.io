@@ -119,39 +119,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentLang }) => {
         </div>
 
         {/* Live Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
-          <div className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
-            <div className="text-2xl sm:text-3xl font-black text-teal-600 dark:text-teal-300 font-mono">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 max-w-3xl mx-auto w-full">
+          <div className="glass-card p-3 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
+            <div className="text-xl sm:text-2xl md:text-3xl font-black text-teal-600 dark:text-teal-300 font-mono">
               {t.hero.stats.uptime}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium">
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium leading-snug">
               {t.hero.stats.uptimeLabel}
             </div>
           </div>
 
-          <div className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-300 font-mono">
+          <div className="glass-card p-3 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
+            <div className="text-lg sm:text-2xl md:text-3xl font-black text-emerald-600 dark:text-emerald-300 font-mono whitespace-nowrap">
               {t.hero.stats.users}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium">
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium leading-snug">
               {t.hero.stats.usersLabel}
             </div>
           </div>
 
-          <div className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
-            <div className="text-2xl sm:text-3xl font-black text-teal-600 dark:text-teal-300 font-mono">
+          <div className="glass-card p-3 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
+            <div className="text-xl sm:text-2xl md:text-3xl font-black text-teal-600 dark:text-teal-300 font-mono">
               {t.hero.stats.latency}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium">
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium leading-snug">
               {t.hero.stats.latencyLabel}
             </div>
           </div>
 
-          <div className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-300 font-mono">
+          <div className="glass-card p-3 sm:p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] text-center">
+            <div className="text-xl sm:text-2xl md:text-3xl font-black text-emerald-600 dark:text-emerald-300 font-mono">
               {t.hero.stats.years}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium">
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium leading-snug">
               {t.hero.stats.yearsLabel}
             </div>
           </div>

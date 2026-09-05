@@ -65,7 +65,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
     : projectsData.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-8 relative">
+    <section id="projects" className="py-16 sm:py-20 px-3.5 sm:px-8 relative overflow-hidden">
       
       {/* Ambient background blur */}
       <div className="ambient-glow-teal top-1/3 -start-20 w-[450px] h-[450px] opacity-10 dark:opacity-15"></div>
@@ -73,7 +73,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.projects.title}
           </h2>
@@ -83,12 +83,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer select-none ${
                 activeCategory === cat.id
                   ? 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border border-teal-500/35 shadow-xs font-bold'
                   : 'bg-slate-100 dark:bg-white/[0.04] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/[0.08] border border-slate-200 dark:border-white/[0.05]'
@@ -100,7 +100,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredProjects.map((project) => {
             const Icon = iconMap[project.iconName] || Layers;
             return (
@@ -109,18 +109,18 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                 className="flex flex-col justify-between overflow-hidden border border-slate-200/80 dark:border-white/[0.07] hover:border-teal-500/30 transition-all duration-300 group"
               >
                 <div>
-                  <CardHeader className="p-6 pb-4">
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <div className="w-11 h-11 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all">
+                  <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-4">
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all shrink-0">
                         <Icon className="w-5 h-5" />
                       </div>
                       {project.metrics && (
-                        <Badge variant="teal" className="text-[10px] font-mono">
+                        <Badge variant="teal" className="text-[10px] font-mono text-end max-w-[calc(100%-3.2rem)] truncate shrink-0">
                           {project.metrics}
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
+                    <CardTitle className="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
                       {project.title[currentLang]}
                     </CardTitle>
                     <CardDescription className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3">
@@ -128,7 +128,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="p-6 pt-0">
+                  <CardContent className="p-4 sm:p-6 pt-0">
                     <div className="flex flex-wrap gap-1.5 mt-2">
                       {project.tags.slice(0, 4).map((tag) => (
                         <span
@@ -147,7 +147,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                   </CardContent>
                 </div>
 
-                <CardFooter className="p-6 pt-2 border-t border-slate-200/80 dark:border-white/[0.05] flex items-center justify-between">
+                <CardFooter className="p-4 sm:p-6 pt-2 border-t border-slate-200/80 dark:border-white/[0.05] flex items-center justify-between">
                   <Button
                     variant="serene"
                     size="sm"

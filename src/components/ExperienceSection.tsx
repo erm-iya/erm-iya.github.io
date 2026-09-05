@@ -56,11 +56,11 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ currentLan
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-8 relative">
+    <section id="experience" className="py-16 sm:py-20 px-3.5 sm:px-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.experience.title}
           </h2>
@@ -70,17 +70,17 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ currentLan
         </div>
 
         {/* Timeline with Accordions */}
-        <div className="relative border-s-2 border-slate-200 dark:border-white/[0.08] ms-4 sm:ms-8 ps-6 sm:ps-8 space-y-6">
+        <div className="relative border-s-2 border-slate-200 dark:border-white/[0.08] ms-3 sm:ms-8 ps-5 sm:ps-8 space-y-4 sm:space-y-6">
           {roles.map((role, idx) => (
             <div key={role.id} className="relative group">
               
               {/* Timeline Node */}
               <div
-                className="absolute -start-[31px] sm:-start-[39px] top-4 w-4 h-4 rounded-full border-2 border-slate-50 dark:border-[#080c14] transition-transform duration-300 group-hover:scale-125 shadow-xs"
+                className="absolute -start-[27px] sm:-start-[39px] top-4 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-slate-50 dark:border-[#080c14] transition-transform duration-300 group-hover:scale-125 shadow-xs"
                 style={{ backgroundColor: role.color }}
               ></div>
 
-              <div className="glass-card p-5 sm:p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300">
+              <div className="glass-card p-4 sm:p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300">
                 <Accordion type="single" collapsible defaultValue={idx === 0 ? role.id : undefined}>
                   <AccordionItem value={role.id} className="border-none">
                     
