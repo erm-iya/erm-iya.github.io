@@ -20,6 +20,9 @@ import {
   Bot,
   LayoutDashboard,
   Terminal,
+  Activity,
+  Video,
+  BookOpen,
   ExternalLink,
   Layers,
   Sparkles,
@@ -38,6 +41,9 @@ const iconMap: Record<string, React.ElementType> = {
   Bot,
   LayoutDashboard,
   Terminal,
+  Activity,
+  Video,
+  BookOpen,
 };
 
 export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang }) => {
@@ -48,8 +54,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
   const categories = [
     { id: 'all', label: t.projects.all },
     { id: 'saas', label: t.projects.saas },
-    { id: 'mobile', label: t.projects.mobile },
+    { id: 'data', label: t.projects.data },
     { id: 'hardware', label: t.projects.hardware },
+    { id: 'mobile', label: t.projects.mobile },
     { id: 'bots', label: t.projects.bots },
   ];
 

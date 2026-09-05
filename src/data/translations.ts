@@ -44,6 +44,7 @@ export interface Translation {
     subtitle: string;
     all: string;
     saas: string;
+    data: string;
     mobile: string;
     hardware: string;
     bots: string;
@@ -184,6 +185,7 @@ export const translations: Record<Language, Translation> = {
       subtitle: "منتخبی از سیستم‌ها، محصولات ابری و پلتفرم‌های مهندسی‌شده",
       all: "همه",
       saas: "ابری و SaaS",
+      data: "داده و ابزارها",
       mobile: "موبایل",
       hardware: "سخت‌افزار و فین‌تک",
       bots: "ربات و اتوماسیون",
@@ -323,6 +325,7 @@ export const translations: Record<Language, Translation> = {
       subtitle: "Handcrafted cloud systems, mobile apps, and infrastructure tools",
       all: "All",
       saas: "Cloud & SaaS",
+      data: "Data & Desktop",
       mobile: "Mobile Apps",
       hardware: "Hardware & FinTech",
       bots: "Bots & Automation",
@@ -462,6 +465,7 @@ export const translations: Record<Language, Translation> = {
       subtitle: "کۆمەڵێک لە سیستم، ئەپ و ئۆتۆمەیشنە دروستکراوەکانم",
       all: "هەموو",
       saas: "هەوری و SaaS",
+      data: "داتا و کەرەستە",
       mobile: "مۆبایل",
       hardware: "سەخت‌ئامێر و فین‌تەک",
       bots: "بۆت و ئۆتۆمەیشن",
@@ -601,6 +605,7 @@ export const translations: Record<Language, Translation> = {
       subtitle: "Eine Auswahl entwickelter Cloud-Systeme, mobiler Apps und Infrastruktur-Tools",
       all: "Alle",
       saas: "Cloud & SaaS",
+      data: "Daten & Desktop",
       mobile: "Mobile Apps",
       hardware: "Hardware & FinTech",
       bots: "Bots & Automation",
