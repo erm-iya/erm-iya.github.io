@@ -61,41 +61,41 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ currentLan
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-400 mb-2">
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.experience.title}
           </h2>
-          <p className="text-2xl sm:text-3xl font-black text-slate-100">
+          <p className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100">
             {t.experience.subtitle}
           </p>
         </div>
 
         {/* Timeline with Accordions */}
-        <div className="relative border-s-2 border-white/[0.08] ms-4 sm:ms-8 ps-6 sm:ps-8 space-y-6">
+        <div className="relative border-s-2 border-slate-200 dark:border-white/[0.08] ms-4 sm:ms-8 ps-6 sm:ps-8 space-y-6">
           {roles.map((role, idx) => (
             <div key={role.id} className="relative group">
               
               {/* Timeline Node */}
               <div
-                className="absolute -start-[31px] sm:-start-[39px] top-4 w-4 h-4 rounded-full border-2 border-[#080c14] transition-transform duration-300 group-hover:scale-125"
+                className="absolute -start-[31px] sm:-start-[39px] top-4 w-4 h-4 rounded-full border-2 border-slate-50 dark:border-[#080c14] transition-transform duration-300 group-hover:scale-125 shadow-xs"
                 style={{ backgroundColor: role.color }}
               ></div>
 
-              <div className="glass-card p-5 sm:p-6 rounded-2xl border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300">
+              <div className="glass-card p-5 sm:p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300">
                 <Accordion type="single" collapsible defaultValue={idx === 0 ? role.id : undefined}>
                   <AccordionItem value={role.id} className="border-none">
                     
                     <AccordionTrigger className="hover:no-underline py-0">
                       <div className="text-start">
-                        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-teal-300 transition-colors">
+                        <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
                           {role.title}
                         </h3>
-                        <div className="flex flex-wrap items-center gap-3 mt-1.5 text-xs text-slate-400">
-                          <span className="flex items-center gap-1.5 text-teal-400/90 font-medium">
+                        <div className="flex flex-wrap items-center gap-3 mt-1.5 text-xs text-slate-500 dark:text-slate-400">
+                          <span className="flex items-center gap-1.5 text-teal-600 dark:text-teal-400/90 font-medium">
                             <Building2 className="w-3.5 h-3.5" />
                             {role.company}
                           </span>
                           <span>•</span>
-                          <span className="flex items-center gap-1.5 font-mono text-slate-400">
+                          <span className="flex items-center gap-1.5 font-mono text-slate-500 dark:text-slate-400">
                             <Calendar className="w-3.5 h-3.5" />
                             {role.period}
                           </span>
@@ -104,7 +104,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ currentLan
                     </AccordionTrigger>
 
                     <AccordionContent className="pt-4 pb-0">
-                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2 border-t border-white/[0.05]">
+                      <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed pt-2 border-t border-slate-200 dark:border-white/[0.05]">
                         {role.desc}
                       </p>
                     </AccordionContent>

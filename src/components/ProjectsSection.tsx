@@ -61,16 +61,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
     <section id="projects" className="py-20 px-4 sm:px-8 relative">
       
       {/* Ambient background blur */}
-      <div className="ambient-glow-teal top-1/3 -start-20 w-[450px] h-[450px] opacity-15"></div>
+      <div className="ambient-glow-teal top-1/3 -start-20 w-[450px] h-[450px] opacity-10 dark:opacity-15"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-400 mb-2">
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.projects.title}
           </h2>
-          <p className="text-2xl sm:text-3xl font-black text-slate-100">
+          <p className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100">
             {t.projects.subtitle}
           </p>
         </div>
@@ -83,8 +83,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
               onClick={() => setActiveCategory(cat.id)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-teal-500/15 text-teal-300 border border-teal-500/35 shadow-sm'
-                  : 'bg-white/[0.04] text-slate-400 hover:text-slate-200 hover:bg-white/[0.08] border border-white/[0.05]'
+                  ? 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border border-teal-500/35 shadow-xs font-bold'
+                  : 'bg-slate-100 dark:bg-white/[0.04] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/[0.08] border border-slate-200 dark:border-white/[0.05]'
               }`}
             >
               {cat.label}
@@ -99,12 +99,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
             return (
               <Card
                 key={project.id}
-                className="flex flex-col justify-between overflow-hidden border border-white/[0.07] hover:border-teal-500/30 transition-all duration-300 group"
+                className="flex flex-col justify-between overflow-hidden border border-slate-200/80 dark:border-white/[0.07] hover:border-teal-500/30 transition-all duration-300 group"
               >
                 <div>
                   <CardHeader className="p-6 pb-4">
                     <div className="flex items-start justify-between gap-3 mb-3">
-                      <div className="w-11 h-11 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all">
+                      <div className="w-11 h-11 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all">
                         <Icon className="w-5 h-5" />
                       </div>
                       {project.metrics && (
@@ -113,10 +113,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">
+                    <CardTitle className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
                       {project.title[currentLang]}
                     </CardTitle>
-                    <CardDescription className="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3">
+                    <CardDescription className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3">
                       {project.summary[currentLang]}
                     </CardDescription>
                   </CardHeader>
@@ -126,7 +126,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                       {project.tags.slice(0, 4).map((tag) => (
                         <span
                           key={tag}
-                          className="text-[11px] px-2 py-0.5 rounded-md bg-white/[0.05] text-slate-300 font-mono"
+                          className="text-[11px] px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-transparent font-mono"
                         >
                           {tag}
                         </span>
@@ -140,7 +140,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                   </CardContent>
                 </div>
 
-                <CardFooter className="p-6 pt-2 border-t border-white/[0.05] flex items-center justify-between">
+                <CardFooter className="p-6 pt-2 border-t border-slate-200/80 dark:border-white/[0.05] flex items-center justify-between">
                   <Button
                     variant="serene"
                     size="sm"
@@ -157,7 +157,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                         href={project.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/[0.06] transition-all"
+                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
                         title={t.projects.viewCode}
                       >
                         <GithubIcon className="w-4 h-4" />
@@ -168,7 +168,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-teal-300 hover:bg-white/[0.06] transition-all"
+                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
                         title={t.projects.liveDemo}
                       >
                         <ExternalLink className="w-4 h-4" />
@@ -198,10 +198,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                   </Badge>
                 )}
               </div>
-              <DialogTitle className="text-xl sm:text-2xl font-black text-white">
+              <DialogTitle className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
                 {selectedProject.title[currentLang]}
               </DialogTitle>
-              <DialogDescription className="text-sm text-slate-300 leading-relaxed pt-2">
+              <DialogDescription className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-2">
                 {selectedProject.description[currentLang]}
               </DialogDescription>
             </DialogHeader>
@@ -209,25 +209,25 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
             <div className="space-y-6 pt-2">
               
               {/* Architecture Section */}
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
-                <h4 className="text-xs font-bold text-teal-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06]">
+                <h4 className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider mb-2 flex items-center gap-2">
                   <Layers className="w-4 h-4" />
                   {t.projects.architecture}
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                   {selectedProject.architecture[currentLang]}
                 </p>
               </div>
 
               {/* Key Features */}
               <div>
-                <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-slate-200 uppercase tracking-wider mb-3">
                   {t.projects.keyFeatures}
                 </h4>
                 <ul className="space-y-2">
                   {selectedProject.keyFeatures[currentLang].map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -236,14 +236,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
 
               {/* Full Tech Stack Pills */}
               <div>
-                <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-slate-200 uppercase tracking-wider mb-2">
                   {t.projects.techStack}
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedProject.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 rounded-lg text-xs font-mono bg-teal-500/10 text-teal-300 border border-teal-500/20"
+                      className="px-2.5 py-1 rounded-lg text-xs font-mono bg-teal-500/10 text-teal-700 dark:text-teal-300 border border-teal-500/20"
                     >
                       {tag}
                     </span>
@@ -252,7 +252,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
               </div>
 
               {/* Modal Links */}
-              <div className="flex flex-wrap items-center justify-end gap-3 pt-4 border-t border-white/[0.07]">
+              <div className="flex flex-wrap items-center justify-end gap-3 pt-4 border-t border-slate-200 dark:border-white/[0.07]">
                 {selectedProject.githubUrl && (
                   <a href={selectedProject.githubUrl} target="_blank" rel="noreferrer">
                     <Button variant="outline" size="sm" className="gap-2">

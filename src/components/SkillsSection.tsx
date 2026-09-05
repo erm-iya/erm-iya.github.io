@@ -31,10 +31,10 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-400 mb-2">
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
             {t.skills.title}
           </h2>
-          <p className="text-2xl sm:text-3xl font-black text-slate-100">
+          <p className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-100">
             {t.skills.subtitle}
           </p>
         </div>
@@ -49,8 +49,8 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
                   activeCategory === cat.id
-                    ? 'bg-teal-500/15 text-teal-300 border border-teal-500/35 shadow-sm'
-                    : 'bg-white/[0.04] text-slate-400 hover:text-slate-200 hover:bg-white/[0.08] border border-white/[0.05]'
+                    ? 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border border-teal-500/35 shadow-xs font-bold'
+                    : 'bg-slate-100 dark:bg-white/[0.04] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/[0.08] border border-slate-200 dark:border-white/[0.05]'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -65,7 +65,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
           {currentSkills.map((skill) => (
             <div
               key={skill.name}
-              className="glass-card p-5 rounded-2xl border border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 group"
+              className="glass-card p-5 rounded-2xl border border-slate-200/80 dark:border-white/[0.06] hover:border-teal-500/30 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
@@ -73,22 +73,22 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ currentLang }) => 
                     className="w-2 h-2 rounded-full"
                     style={{ backgroundColor: skill.color }}
                   ></span>
-                  <span className="text-sm font-bold text-slate-200 group-hover:text-teal-300 transition-colors">
+                  <span className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
                     {skill.name}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] text-slate-400 font-medium">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                     {skill.level}
                   </span>
-                  <span className="text-xs font-mono font-bold text-teal-300">
+                  <span className="text-xs font-mono font-bold text-teal-600 dark:text-teal-300">
                     {skill.percent}%
                   </span>
                 </div>
               </div>
 
               {/* Progress Track */}
-              <div className="h-2 rounded-full bg-slate-900/80 border border-white/[0.05] overflow-hidden p-0.5">
+              <div className="h-2 rounded-full bg-slate-200/70 dark:bg-slate-900/80 border border-slate-200 dark:border-white/[0.05] overflow-hidden p-0.5">
                 <div
                   className="h-full rounded-full transition-all duration-700 ease-out"
                   style={{

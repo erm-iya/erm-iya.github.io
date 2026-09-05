@@ -15,12 +15,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       default: "bg-teal-600 text-white hover:bg-teal-500 shadow-md shadow-teal-900/30 active:scale-[0.98]",
-      serene: "bg-teal-500/10 text-teal-300 border border-teal-500/20 hover:bg-teal-500/20 hover:border-teal-500/40 hover:text-teal-200 transition-all",
+      serene: "bg-teal-500/10 text-teal-700 dark:text-teal-300 border border-teal-500/25 hover:bg-teal-500/20 hover:border-teal-500/40 hover:text-teal-800 dark:hover:text-teal-200 transition-all",
       destructive: "bg-red-600 text-white hover:bg-red-500",
-      outline: "border border-white/10 bg-transparent hover:bg-white/5 hover:text-teal-300 text-slate-300",
-      secondary: "bg-slate-800 text-slate-100 hover:bg-slate-700",
-      ghost: "hover:bg-white/5 hover:text-teal-300 text-slate-400",
-      link: "text-teal-400 underline-offset-4 hover:underline",
+      outline: "border border-slate-300 dark:border-white/10 bg-transparent hover:bg-slate-100 dark:hover:bg-white/5 hover:text-teal-600 dark:hover:text-teal-300 text-slate-700 dark:text-slate-300",
+      secondary: "bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700",
+      ghost: "hover:bg-slate-100 dark:hover:bg-white/5 hover:text-teal-600 dark:hover:text-teal-300 text-slate-600 dark:text-slate-400",
+      link: "text-teal-600 dark:text-teal-400 underline-offset-4 hover:underline",
     }[variant]
 
     const sizeStyles = {
