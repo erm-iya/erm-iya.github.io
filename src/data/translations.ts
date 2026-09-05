@@ -262,7 +262,7 @@ export const translations: Record<Language, Translation> = {
       availableBadge: "هم‌اکنون آماده گفتگو",
     },
     footer: {
-      designedBy: "طراحی و توسعه با ظرافت و پایداری توسط ارمیا حیدری",
+      designedBy: "طراحی و توسعه توسط ارمیا حیدری",
       rights: "تمامی حقوق محفوظ است.",
     },
   },
@@ -402,7 +402,7 @@ export const translations: Record<Language, Translation> = {
       availableBadge: "Available for new opportunities",
     },
     footer: {
-      designedBy: "Engineered with precision and serene aesthetics by Ermiya Heidari",
+      designedBy: "Designed & Engineered by Ermiya Heidari",
       rights: "All rights reserved.",
     },
   },
@@ -542,7 +542,7 @@ export const translations: Record<Language, Translation> = {
       availableBadge: "ئامادەم بۆ وەڵامدانەوە",
     },
     footer: {
-      designedBy: "بە وردەکاری و دیزاینی دڵنەواز ساز کراوە لە لایەن ئێرمیا حەیدەری",
+      designedBy: "دیزاین و پەرەپێدان لەلایەن ئێرمیا حەیدەری",
       rights: "هەموو مافەکانی پارێزراوە.",
     },
   },
@@ -682,7 +682,7 @@ export const translations: Record<Language, Translation> = {
       availableBadge: "Verfügbar für neue Herausforderungen",
     },
     footer: {
-      designedBy: "Präzise und ästhetisch entwickelt von Ermiya Heidari",
+      designedBy: "Entworfen & Entwickelt von Ermiya Heidari",
       rights: "Alle Rechte vorbehalten.",
     },
   },

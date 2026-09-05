@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-erm--iya.github.io-0d9488?style=for-the-badge&logo=github)](https://erm-iya.github.io)
 [![Tech Stack](https://img.shields.io/badge/Stack-React%2019%20%7C%20TypeScript%20%7C%20Vite%20%7C%20Tailwind-14b8a6?style=for-the-badge)](https://github.com/erm-iya)
-[![License](https://img.shields.io/badge/License-MIT-slate?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-slate?style=for-the-badge)](https://github.com/erm-iya)
 
 A high-performance, minimalist personal portfolio and engineering showcase engineered for **Ermiya Heidari** (Lead Back-End Engineer & Co-Founder at **LUXIMO**). Designed around a zen-minimalist aesthetic, featuring deep velvet dark mode, crisp high-contrast light mode, full 4-language i18n localization, native vector SVG flags, and an interactive developer CLI console.
 
