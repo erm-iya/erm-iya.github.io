@@ -1,32 +1,71 @@
-# React + TypeScript + Vite
+# پورتفولیو شخصی و مهندسی ارمیا حیدری (Ermiya Heidari)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+وب‌سایت پورتفولیو مدرن، مینیمال و آرامش‌بخش (Zen Minimalist) با تم اختصاصی **Teal & Emerald Dark**، فونت اصیل **IRANYekanX**، پشتیبانی کامل از **۴ زبان (فارسی، انگلیسی، کوردی سۆرانی، آلمانی)** و سازگار با **GitHub Pages**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 ویژگی‌های برجسته (Key Highlights)
 
-## React Compiler
+- **طراحی دلنواز و مینیمال (Zen Minimal & Serene Dark)**:
+  - پس‌زمینه دارک مخملی (`#080c14`) به دور از شلوغی‌های بصری با رنگ‌های ملایم فیروزه‌ای (`Teal`) و سبز زمردی (`Emerald`).
+  - افکت‌های شیشه‌ای لطیف (Glassmorphism) و مرزهای فوق‌باریک و صیقلی.
+- **تایپوگرافی رسمی و چشم‌نواز با IRANYekanX**:
+  - بارگذاری مستقیم فایل‌های Woff2 فونت ایران‌یکان از پوشه `public/fonts/` جهت نمایش یکدست در تمام سیستم‌عامل‌ها.
+- **پشتیبانی کامل از ۴ زبان (4-Language Ready)**:
+  - **فارسی (FA)** - راست‌به‌چپ (RTL)
+  - **English (EN)** - چپ‌به‌راست (LTR)
+  - **کوردی سۆرانی ئەردەڵانی (KU)** - راست‌به‌چپ (RTL)
+  - **Deutsch (DE)** - چپ‌به‌راست (LTR)
+- **کامپوننت‌های پایدار shadcn/ui و Radix UI**:
+  - `Card`, `Button`, `Badge`, `Dialog`, `Tabs`, `Accordion`
+- **ویترین جامع پروژه‌ها همراه با دیاگرام و توضیحات معماری**:
+  - پروژه ابری لوکسیمو (LUXIMO Core SaaS)
+  - پل ارتباطی کارت‌خوان‌های بانکی (LUXIMO PcPos Bridge)
+  - اپلیکیشن موبایل مدیریت دانلود iOS (Liquid Glass UI)
+  - ربات تلگرام مدیریت تسک لوکسیمو (TTM Task Bot)
+  - سامانه مدیریت پروژه تعاملی (Planer Web Suite)
+  - اتوماسیون پروویژن سرور دیجی‌هاست (DigiHost Automizer)
+- **کنسول تعاملی توسعه‌دهنده (Dev Console / Easter Egg)**:
+  - ترمینال شبیه‌سازی‌شده در صفحه با دستورات `help`, `bio`, `projects`, `skills`, `contact`, `hire` (همراه با انیمیشن جشن کانفتی).
+- **اتصال مستقیم شبکه‌های ارتباطی**:
+  - کپی سریع ایمیل با یک کلیک و فیدبک لحظه‌ای، لینک مستقیم تلگرام، گیت‌هاب، اینستاگرام و تماس تلفنی.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 نحوه اجرا در محیط محلی (Local Development)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+```bash
+# نصب وابستگی‌ها
+npm install
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# اجرای سرور توسعه
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+سپس آدرس `http://localhost:5173/` را در مرورگر باز کنید.
+
+---
+
+## 📦 استقرار آسان روی GitHub Pages (Deployment)
+
+### روش اول: استقرار خودکار با GitHub Actions (پیش‌نهادی)
+یک فایل ورک‌فلو در مسیر `.github/workflows/deploy.yml` آماده شده است. تنها کافیست ریپازیتوری را در اکانت گیت‌هاب خود push کنید:
+1. در گیت‌هاب به بخش **Settings** > **Pages** بروید.
+2. در بخش **Build and deployment** منبع (Source) را روی **GitHub Actions** بگذارید.
+3. با هر بار `git push origin main`، سایت به صورت اتوماتیک بیلد شده و روی آدرس دامنه گیت‌هاب شما منتشر می‌شود.
+
+### روش دوم: استقرار دستی با اسکریپت
+```bash
+npm run deploy
+```
+
+---
+
+## 🛠️ استک فنی (Tech Stack)
+
+- **Framework**: React 19 + TypeScript + Vite 8
+- **Styling**: Tailwind CSS v3 + CSS Variables + Glassmorphism
+- **Components**: Radix UI Primitives (shadcn/ui style)
+- **Icons**: Lucide React + Inline SVGs
+- **Typography**: IRANYekanX (Thin to ExtraBlack)
+- **Easter Eggs**: Canvas-Confetti
