@@ -148,8 +148,8 @@ export const translations: Record<Language, Translation> = {
       stats: {
         uptime: "99.99%",
         uptimeLabel: "آپتایم سرورها",
-        users: "+50K",
-        usersLabel: "کاربران ربات‌ها و سرویس‌ها",
+        users: "+15 / +10K",
+        usersLabel: "سیستم‌ها و رکوردهای پردازش‌شده",
         latency: "<50ms",
         latencyLabel: "تاخیر سینک Real-Time",
         years: "+6",
@@ -288,8 +288,8 @@ export const translations: Record<Language, Translation> = {
       stats: {
         uptime: "99.99%",
         uptimeLabel: "System Uptime",
-        users: "+50K",
-        usersLabel: "Bot & Service Users",
+        users: "+15 / +10K",
+        usersLabel: "Engineered Systems & Data Records",
         latency: "<50ms",
         latencyLabel: "Real-Time Sync Latency",
         years: "+6",
@@ -428,8 +428,8 @@ export const translations: Record<Language, Translation> = {
       stats: {
         uptime: "99.99%",
         uptimeLabel: "ئاپتایمی سێرڤەر",
-        users: "+50K",
-        usersLabel: "بەکارهێنەرانی بۆتەکان",
+        users: "+15 / +10K",
+        usersLabel: "سیستمی پەرەپێدراو و داتای شیکارکراو",
         latency: "<50ms",
         latencyLabel: "خێرایی سینک (Real-Time)",
         years: "+6",
@@ -568,8 +568,8 @@ export const translations: Record<Language, Translation> = {
       stats: {
         uptime: "99.99%",
         uptimeLabel: "Systemverfügbarkeit",
-        users: "+50K",
-        usersLabel: "Aktive Bot-Nutzer",
+        users: "+15 / +10K",
+        usersLabel: "Systeme & verarbeitete Datensätze",
         latency: "<50ms",
         latencyLabel: "Echtzeit-Latenz",
         years: "+6",
