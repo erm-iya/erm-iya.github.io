@@ -37,5 +37,13 @@ This document is the persistent memory and single source of truth for architectu
   - Cloudflare's runner invokes `npx wrangler deploy` directly via runner binaries without requiring local lockfile coupling.
 - **Verification**: `package.json` and `package-lock.json` restored to strict parity; `npm ci` now executes without errors.
 
+## 2026-10-13: Remove redundant _redirects for Cloudflare Static Assets
+- **Summary**: Removed `public/_redirects` to eliminate infinite rewrite loop error (Cloudflare API code 100324).
+- **Technical Details**:
+  - `wrangler.json` already specifies `assets.not_found_handling: "single-page-application"`, which natively handles SPA rewrites at the Edge without requiring a manual `_redirects` file.
+  - Having `/* /index.html 200` caused a conflict with Wrangler's asset routing engine.
+- **Verification**: Verified removal of `public/_redirects`. Ready for seamless deployment.
+
+
 
 
