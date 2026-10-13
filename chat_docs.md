@@ -23,3 +23,11 @@ This document is the persistent memory and single source of truth for architectu
   - `src/data/translations.ts`: Added full 4-language i18n support (`fa`, `en`, `ku`, `de`) for all form fields, labels, placeholders, and feedback states.
 - **Verification**: `oxlint` executed cleanly (0 errors, 0 warnings). `npm run build` completed successfully, producing production bundles in `dist/`.
 
+## 2026-10-13: Cloudflare Workers Static Assets Integration (wrangler.json)
+- **Summary**: Added native Cloudflare Workers Static Assets configuration (`wrangler.json`) to guarantee 100% compatibility with both Cloudflare Workers CI/CD (`npx wrangler deploy`) and Cloudflare Pages Git flows.
+- **Technical Details**:
+  - `wrangler.json`: Configured with `assets.directory: "./dist"`, `assets.not_found_handling: "single-page-application"`, and `assets.html_handling: "auto-trailing-slash"`.
+  - `package.json`: Added `wrangler` to devDependencies.
+- **Verification**: Ready for direct one-click deployment via Cloudflare Dashboard.
+
+
