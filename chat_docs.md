@@ -30,4 +30,12 @@ This document is the persistent memory and single source of truth for architectu
   - `package.json`: Added `wrangler` to devDependencies.
 - **Verification**: Ready for direct one-click deployment via Cloudflare Dashboard.
 
+## 2026-10-13: Revert Wrangler from package.json to Restore npm ci Lockfile Sync
+- **Summary**: Resolved Cloudflare build failure (`npm error code EUSAGE / npm ci lock file out of sync`).
+- **Technical Details**:
+  - Removed `wrangler` devDependency from `package.json` to keep `package.json` in 100% sync with existing `package-lock.json`.
+  - Cloudflare's runner invokes `npx wrangler deploy` directly via runner binaries without requiring local lockfile coupling.
+- **Verification**: `package.json` and `package-lock.json` restored to strict parity; `npm ci` now executes without errors.
+
+
 
