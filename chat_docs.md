@@ -44,6 +44,15 @@ This document is the persistent memory and single source of truth for architectu
   - Having `/* /index.html 200` caused a conflict with Wrangler's asset routing engine.
 - **Verification**: Verified removal of `public/_redirects`. Ready for seamless deployment.
 
+## 2026-10-13: Custom Domain Migration to ermiya-h.ir
+- **Summary**: Transitioned all canonical endpoints, Open Graph tags, XML sitemap entries, and structured data schemas from GitHub Pages URLs to the custom domain `https://ermiya-h.ir`.
+- **Technical Details**:
+  - `index.html`: Updated canonical URL, `og:url`, `og:image`, `twitter:image`, and Schema.org JSON-LD Person profile URL to `https://ermiya-h.ir`.
+  - `public/sitemap.xml`: Configured primary location and alternate multi-language links (`fa`, `en`, `ku`, `de`) to `https://ermiya-h.ir/`.
+  - `public/robots.txt`: Pointed `Sitemap` directive to `https://ermiya-h.ir/sitemap.xml`.
+  - `package.json`: Updated `homepage` field to `https://ermiya-h.ir`.
+- **Verification**: Ready for Cloudflare Custom Domain association.
+
 
 
 

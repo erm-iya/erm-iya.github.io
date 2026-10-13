@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap URL (update domain after setting custom domain in Cloudflare Pages)
-Sitemap: https://erm-iya.github.io/sitemap.xml
+# Sitemap URL
+Sitemap: https://ermiya-h.ir/sitemap.xml
