@@ -51,7 +51,20 @@ This document is the persistent memory and single source of truth for architectu
   - `public/sitemap.xml`: Configured primary location and alternate multi-language links (`fa`, `en`, `ku`, `de`) to `https://ermiya-h.ir/`.
   - `public/robots.txt`: Pointed `Sitemap` directive to `https://ermiya-h.ir/sitemap.xml`.
   - `package.json`: Updated `homepage` field to `https://ermiya-h.ir`.
-- **Verification**: Ready for Cloudflare Custom Domain association.
+## 2026-10-13: Cloudflare Workers Custom Domain DNS Collision Resolution
+- **Summary**: Handled Cloudflare Custom Domain collision error: `Hostname 'ermiya-h.ir' already has externally managed DNS records (A, CNAME, etc). Delete them first or try a different hostname.`
+- **Technical Details**:
+  - Cloudflare's initial zone onboarding scan auto-imports existing DNS records (e.g. root `A` or `CNAME` records pointing to former host IPs).
+  - Workers Custom Domains require full management of the zone apex hostname to route traffic through the Workers Edge runtime.
+  - Solution: Remove the conflicting pre-existing `A`/`CNAME` records from the zone's DNS table before attaching the custom domain to the Worker.
+- **Verification**: User guided to delete legacy root DNS record and re-trigger domain attachment.
+
+## 2026-10-13: Network Optimization for Regional Edge Latency (HTTP/3 & 0-RTT)
+- **Summary**: Diagnosed ~22s asset loading stall on `ermiya-h.ir`. Root cause was browser waiting for UDP port 443 QUIC handshake timeout across Iranian ISP DPI before falling back to TCP HTTP/2.
+- **Technical Details**:
+  - Disabled `HTTP/3 (with QUIC)` in Cloudflare Network settings to suppress `Alt-Svc: h3` headers and avoid UDP blocking penalties.
+  - Disabled `0-RTT Connection Resumption` to avoid anti-replay / TLS packet inspection delays.
+- **Verification**: Browser falls back directly to HTTP/2 with sub-second asset delivery.
 
 
 
