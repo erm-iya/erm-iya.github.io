@@ -119,6 +119,23 @@ export interface Translation {
     instagramProfile: string;
     phoneCall: string;
     availableBadge: string;
+    formTitle: string;
+    formSubtitle: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    subjectLabel: string;
+    subjectPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitBtn: string;
+    sendingBtn: string;
+    successTitle: string;
+    successDesc: string;
+    sendAnother: string;
+    errorMsg: string;
+    fallbackMailto: string;
   };
   footer: {
     designedBy: string;
@@ -260,6 +277,23 @@ export const translations: Record<Language, Translation> = {
       instagramProfile: "اینستاگرام",
       phoneCall: "تماس تلفنی",
       availableBadge: "هم‌اکنون آماده گفتگو",
+      formTitle: "ارسال پیام مستقیم به ایمیل",
+      formSubtitle: "فرم زیر را پر کنید تا پیام شما بلافاصله به ایمیل شخصی من ارسال شود.",
+      nameLabel: "نام و نام خانوادگی",
+      namePlaceholder: "مثال: علی رضایی",
+      emailLabel: "آدرس ایمیل شما",
+      emailPlaceholder: "yourname@example.com",
+      subjectLabel: "موضوع پیام",
+      subjectPlaceholder: "پیشنهاد همکاری، پروژه یا سوال فنی...",
+      messageLabel: "متن پیام",
+      messagePlaceholder: "توضیحات پروژه، نیازمندی‌ها یا جزئیات مورد نظرتان را اینجا بنویسید...",
+      submitBtn: "ارسال پیام به ایمیل ارمیا",
+      sendingBtn: "در حال ارسال پیام...",
+      successTitle: "پیام شما با موفقیت ارسال شد!",
+      successDesc: "ایمیل شما را دریافت کردم و در سریع‌ترین زمان ممکن به آن پاسخ خواهم داد.",
+      sendAnother: "ارسال یک پیام دیگر",
+      errorMsg: "خطا در ارسال پیام رخ داد. لطفاً مجدداً تلاش کنید یا مستقیماً ایمیل بزنید.",
+      fallbackMailto: "ارسال با اپلیکیشن ایمیل (Mailto)",
     },
     footer: {
       designedBy: "طراحی و توسعه توسط ارمیا حیدری",
@@ -400,6 +434,23 @@ export const translations: Record<Language, Translation> = {
       instagramProfile: "Instagram",
       phoneCall: "Phone Call",
       availableBadge: "Available for new opportunities",
+      formTitle: "Send a Direct Message",
+      formSubtitle: "Fill out the form below to deliver your message straight to my personal inbox.",
+      nameLabel: "Full Name",
+      namePlaceholder: "e.g., John Doe",
+      emailLabel: "Email Address",
+      emailPlaceholder: "john@example.com",
+      subjectLabel: "Subject",
+      subjectPlaceholder: "Project inquiry, collaboration, or tech chat...",
+      messageLabel: "Your Message",
+      messagePlaceholder: "Describe your project or inquiry details here...",
+      submitBtn: "Send Message to Ermiya",
+      sendingBtn: "Sending Message...",
+      successTitle: "Message Delivered Successfully!",
+      successDesc: "Thank you for reaching out. I have received your email and will reply promptly.",
+      sendAnother: "Send Another Message",
+      errorMsg: "Failed to send message. Please try again or reach out via email directly.",
+      fallbackMailto: "Send via Email Client (Mailto)",
     },
     footer: {
       designedBy: "Designed & Engineered by Ermiya Heidari",
@@ -540,6 +591,23 @@ export const translations: Record<Language, Translation> = {
       instagramProfile: "ئینستاگرام",
       phoneCall: "پەیوەندی تەلەفۆنی",
       availableBadge: "ئامادەم بۆ وەڵامدانەوە",
+      formTitle: "ناردنی پەیامی ڕاستەوخۆ",
+      formSubtitle: "ئەم فۆرمە پڕبکەرەوە تاوەکو ڕاستەوخۆ بۆ ئیمەیلی تایبەتی من بنێردرێت.",
+      nameLabel: "ناوی تەواو",
+      namePlaceholder: "بۆ نموونە: ئاراس ئەحمەد",
+      emailLabel: "ناونیشانی ئیمەیل",
+      emailPlaceholder: "aras@example.com",
+      subjectLabel: "بابەتی پەیام",
+      subjectPlaceholder: "پڕۆژەی نوێ، هاوکاری یان پرسیار...",
+      messageLabel: "دەقی پەیام",
+      messagePlaceholder: "وردەکاری پڕۆژە یان مەبەستی پەیامەکەت لێرە بنووسە...",
+      submitBtn: "ناردنی پەیام بۆ ئێرمیا",
+      sendingBtn: "لە حاڵی ناردندا...",
+      successTitle: "پەیامەکەت بە سەرکەوتوویی نێردرا!",
+      successDesc: "پەیامەکەت گەیشتە دەستم و لە زووترین کاتدا وەڵامت دەدەمەوە.",
+      sendAnother: "ناردنی پەیامێکی تر",
+      errorMsg: "هەڵە لە ناردنی پەیام ڕوویدا. تکایە دووبارە هەوڵ بدەرەوە یان ڕاستەوخۆ ئیمەیل بنێرە.",
+      fallbackMailto: "ناردن لەڕێگەی ئەپی ئیمەیل (Mailto)",
     },
     footer: {
       designedBy: "دیزاین و پەرەپێدان لەلایەن ئێرمیا حەیدەری",
@@ -680,6 +748,23 @@ export const translations: Record<Language, Translation> = {
       instagramProfile: "Instagram",
       phoneCall: "Telefonanruf",
       availableBadge: "Verfügbar für neue Herausforderungen",
+      formTitle: "Direktnachricht senden",
+      formSubtitle: "Füllen Sie das Formular aus, um Ihre Nachricht direkt an mein persönliches Postfach zu senden.",
+      nameLabel: "Vollständiger Name",
+      namePlaceholder: "z. B. Max Mustermann",
+      emailLabel: "E-Mail-Adresse",
+      emailPlaceholder: "max@example.de",
+      subjectLabel: "Betreff",
+      subjectPlaceholder: "Projektanfrage, Zusammenarbeit oder technische Frage...",
+      messageLabel: "Nachricht",
+      messagePlaceholder: "Beschreiben Sie hier Ihre Projektanforderungen oder Ihr Anliegen...",
+      submitBtn: "Nachricht an Ermiya senden",
+      sendingBtn: "Wird gesendet...",
+      successTitle: "Nachricht erfolgreich versendet!",
+      successDesc: "Vielen Dank für Ihre Nachricht. Ich habe Ihre E-Mail erhalten und werde mich zeitnah melden.",
+      sendAnother: "Weitere Nachricht senden",
+      errorMsg: "Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt per E-Mail.",
+      fallbackMailto: "Über E-Mail-Programm senden (Mailto)",
     },
     footer: {
       designedBy: "Entworfen & Entwickelt von Ermiya Heidari",
