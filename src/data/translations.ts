@@ -158,7 +158,7 @@ export const translations: Record<Language, Translation> = {
       statusBadge: "",
       greeting: "سلام، من",
       name: "ارمیا حیدری",
-      role: "توسعه‌دهنده بک‌اند و هم‌بنیان‌گذار شرکت هوش‌افزار زمرد (لوکسیمو)",
+      role: "مدیرعامل شرکت هوش‌افزار زمرد و مهندس ارشد بک‌اند لوکسیمو",
       headline: "توسعه سیستم‌های بلادرنگ، معماری بک‌اند و یکپارچه‌سازی سخت‌افزار",
       subheadline: "طراحی و استقرار میکروسرویس‌های Node.js و MongoDB، پل‌های ارتباطی سخت‌افزاری با پایانه‌های پوز بانکی، و توسعه اتوماسیون‌های لینوکس و تلگرام.",
       ctaProjects: "مشاهده پروژه‌ها",
@@ -177,7 +177,7 @@ export const translations: Record<Language, Translation> = {
     about: {
       title: "درباره من",
       subtitle: "تمرکز بر پایداری سیستم، کدهای تمیز و حل چالش‌های واقعی پروداکشن",
-      paragraph1: "من ارمیا حیدری هستم؛ توسعه‌دهنده بک‌اند و هم‌بنیان‌گذار شرکت هوش‌افزار زمرد (لوکسیمو). در طول سال‌های فعالیتم، تمرکز اصلی من بر طراحی معماری‌های تاب‌آور، سیستم‌های بلادرنگ با Socket.io و پردازش داده‌های توزیع‌شده بوده است.",
+      paragraph1: "من ارمیا حیدری هستم؛ مدیرعامل و هم‌بنیان‌گذار شرکت هوش‌افزار زمرد (لوکسیمو) و مهندس ارشد بک‌اند. در طول سال‌های فعالیتم، تمرکز اصلی من بر طراحی معماری‌های تاب‌آور، سیستم‌های بلادرنگ با Socket.io و پردازش داده‌های توزیع‌شده بوده است.",
       paragraph2: "از برقراری ارتباط وب‌اپلیکیشن‌ها با پایانه‌های کارت‌خوان بانکی (PcPos) از طریق سوکت و لایه‌های نیتیو گرفته تا توسعه ربات‌های تعاملی تلگرام و اپلیکیشن‌های کاربردی، اولویت من ساخت ابزارهایی است که در دنیای واقعی با نهایت پایداری کار کنند.",
       highlights: [
         {
@@ -231,7 +231,7 @@ export const translations: Record<Language, Translation> = {
       present: "اکنون",
       roles: {
         luximo: {
-          title: "هم‌بنیان‌گذار و مدیر ارشد بک‌اند",
+          title: "مدیرعامل و مدیر ارشد بک‌اند",
           company: "لوکسیمو (LUXIMO)",
           period: "1404 - اکنون",
           desc: "معماری صفر تا صد پلتفرم ابری مدیریت رستوران و خرده‌فروشی. توسعه زیرساخت بلادرنگ Socket.io میان صندوق، گارسون، آشپزخانه و مشتریان. پیاده‌سازی کش RAM سرور و پل ارتباطی اختصاصی با پوزهای بانکی کشور.",
@@ -316,7 +316,7 @@ export const translations: Record<Language, Translation> = {
       statusBadge: "",
       greeting: "Hello, I am",
       name: "Ermiya Heidari",
-      role: "Back-End Engineer & Co-Founder at Hoosh Afzar Zomorrod (LUXIMO)",
+      role: "CEO & Lead Back-End Engineer at Hoosh Afzar Zomorrod (LUXIMO)",
       headline: "Distributed Systems, Real-Time Architecture & Hardware Integration",
       subheadline: "Designing and deploying Node.js/MongoDB microservices, local bank POS terminal hardware bridges, and Linux/Telegram automations.",
       ctaProjects: "Explore Projects",
@@ -335,7 +335,7 @@ export const translations: Record<Language, Translation> = {
     about: {
       title: "About Me",
       subtitle: "Focusing on system reliability, clean architecture, and real production performance",
-      paragraph1: "I am Ermiya Heidari, a back-end engineer and co-founder at Hoosh Afzar Zomorrod (LUXIMO). Over the past several years, my work has centered on architecting resilient server services, sub-second real-time state synchronization, and scalable data systems.",
+      paragraph1: "I am Ermiya Heidari, CEO and co-founder at Hoosh Afzar Zomorrod (LUXIMO) and lead back-end engineer. Over the past several years, my work has centered on architecting resilient server services, sub-second real-time state synchronization, and scalable data systems.",
       paragraph2: "From connecting web applications with bank POS terminals using local sockets and native drivers to developing high-throughput Telegram bots and desktop data tools, I focus on software that runs dependably in production.",
       highlights: [
         {
@@ -389,7 +389,7 @@ export const translations: Record<Language, Translation> = {
       present: "Present",
       roles: {
         luximo: {
-          title: "Co-Founder & Lead Back-End Engineer",
+          title: "CEO & Lead Back-End Engineer",
           company: "LUXIMO",
           period: "2025 - Present",
           desc: "Architected the full back-end infrastructure for the cloud restaurant management SaaS. Implemented Socket.io real-time synchronization between cashier POS, waiter handhelds, kitchen screens, and customers. Engineered custom bank POS card-reader bridge.",
@@ -474,7 +474,7 @@ export const translations: Record<Language, Translation> = {
       statusBadge: "",
       greeting: "سڵاو، ئەمن",
       name: "ئێرمیا حەیدەری",
-      role: "گەشەپێدەری باکێند و هاودامەزرێنەری هۆش‌ئەفزار زومڕود (لوکسیمۆ)",
+      role: "بەڕێوەبەری جێبەجێکار (CEO) و ئەندازیاری ارشدی باکێند لە هۆش‌ئەفزار زومڕود (لوکسیمۆ)",
       headline: "تەلارسازی سیستەمی باکێند، خزمەتگوزاری ڕاستەوخۆ و پەیوەندی سەخت‌ئامێر",
       subheadline: "دیزاینی مایکرۆسێرڤیسی Node.js و MongoDB، بەستنەوەی پۆزی بانکی بە نەرمەکاڵا و ئۆتۆمەیشنی سرڤەری لینوکس و بۆتی تێلێگرام.",
       ctaProjects: "دیتنی پڕۆژەکان",
@@ -493,7 +493,7 @@ export const translations: Record<Language, Translation> = {
     about: {
       title: "دەربارەی من",
       subtitle: "سەرنج لەسەر بەردەوامی سیستەم، کۆدی خاوێن و چارەسەری کێشە لە پرۆداکشن",
-      paragraph1: "ئەمن ئێرمیا حەیدەریم؛ گەشەپێدەری باکێند و هاودامەزرێنەری کۆمپانیای لوکسیمۆ. لەم ساڵانەدا سەرنجی سەرەکیم لەسەر دیزاینی سیستمی قایم، داتای بەربڵاو و پەیوەندی ڕاستەوخۆ بە Socket.io بووە.",
+      paragraph1: "ئەمن ئێرمیا حەیدەریم؛ بەڕێوەبەری جێبەجێکار (CEO) و هاودامەزرێنەری کۆمپانیای لوکسیمۆ و ئەندازیاری باکێند. لەم ساڵانەدا سەرنجی سەرەکیم لەسەر دیزاینی سیستمی قایم، داتای بەربڵاو و پەیوەندی ڕاستەوخۆ بە Socket.io بووە.",
       paragraph2: "لە گرێدانی ئامێرەکانی کارتی بانکییەوە لە ڕێی سۆکێت و شێوازی نەیتیڤ هەتا دروستکردنی بۆتی خێرای تێلێگرام و ئەپڵیکەیشن، ئامانجم دروستکردنی نەرمەکاڵایە کە لە جیهانی ڕاستەقینەدا بەردەوام و خێرا کار بکات.",
       highlights: [
         {
@@ -547,7 +547,7 @@ export const translations: Record<Language, Translation> = {
       present: "ئێستا",
       roles: {
         luximo: {
-          title: "هاودامەزرێنەر و سەرپەرشتیاری باکێند",
+          title: "بەڕێوەبەری جێبەجێکار (CEO) و سەرپەرشتیاری باکێند",
           company: "لوکسیمۆ (LUXIMO)",
           period: "1404 - هەتا ئێستا",
           desc: "تەلارسازی ژێرخانی باکێندی پلاتفۆرمی لوکسیمۆ. سازکردنی سیستمی سینکی آنی لە نێوان سندووق، میواندار، چێشتخانە و کڕیار بە Socket.io و کشینگی ناو RAM.",
@@ -632,7 +632,7 @@ export const translations: Record<Language, Translation> = {
       statusBadge: "",
       greeting: "Hallo, ich bin",
       name: "Ermiya Heidari",
-      role: "Back-End Entwickler & Mitgründer bei Hoosh Afzar Zomorrod (LUXIMO)",
+      role: "CEO & Lead Back-End Entwickler bei Hoosh Afzar Zomorrod (LUXIMO)",
       headline: "Verteilte Systeme, Echtzeit-Architektur & Hardware-Integration",
       subheadline: "Entwicklung und Bereitstellung von Node.js- und MongoDB-Microservices, Bank-POS-Hardware-Schnittstellen und Linux-/Telegram-Automatisierungen.",
       ctaProjects: "Projekte ansehen",
@@ -651,7 +651,7 @@ export const translations: Record<Language, Translation> = {
     about: {
       title: "Über mich",
       subtitle: "Fokus auf Systemstabilität, sauberen Code und reale Produktionsanforderungen",
-      paragraph1: "Ich bin Ermiya Heidari, Back-End Entwickler und Mitgründer von Hoosh Afzar Zomorrod (LUXIMO). Mein Arbeitsschwerpunkt liegt auf resilienten Serverarchitekturen, Echtzeit-Datensynchronisation mit Socket.io und verteilten Datensystemen.",
+      paragraph1: "Ich bin Ermiya Heidari, CEO und Mitgründer von Hoosh Afzar Zomorrod (LUXIMO) sowie Lead Back-End Entwickler. Mein Arbeitsschwerpunkt liegt auf resilienten Serverarchitekturen, Echtzeit-Datensynchronisation mit Socket.io und verteilten Datensystemen.",
       paragraph2: "Von der Anbindung von Webanwendungen an Bank-POS-Terminals über Sockets und native Treiber bis hin zu Telegram-Bots und Desktop-Tools baue ich Software, die im Produktivbetrieb zuverlässig funktioniert.",
       highlights: [
         {
@@ -705,7 +705,7 @@ export const translations: Record<Language, Translation> = {
       present: "Heute",
       roles: {
         luximo: {
-          title: "Mitgründer & Lead Back-End Engineer",
+          title: "CEO & Lead Back-End Entwickler",
           company: "LUXIMO",
           period: "2025 - Heute",
           desc: "Entwurf und Realisierung der gesamten Cloud-Infrastruktur für Restaurantmanagement. Echtzeit-Synchronisation zwischen Kassen, Handhelds, Küche und Gästen via Socket.io und In-Memory-RAM-Caching. Entwicklung der PcPos-Zahlungsbrücke.",

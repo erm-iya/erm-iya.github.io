@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
             <span className="text-[10px] text-teal-600 dark:text-teal-400/90 font-medium flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              LUXIMO Co-Founder
+              CEO at LUXIMO
             </span>
           </div>
         </a>

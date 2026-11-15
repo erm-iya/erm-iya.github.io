@@ -32,10 +32,10 @@ export function App() {
     localStorage.setItem('portfolio_lang', currentLang);
 
     const titles = {
-      fa: 'ارمیا حیدری | توسعه‌دهنده ارشد بک‌اند و هم‌بنیان‌گذار لوکسیمو',
-      en: 'Ermiya Heidari | Lead Back-End Engineer & Co-Founder at LUXIMO',
-      ku: 'ئێرمیا حەیدەری | پۆرتفۆلیۆی ئەندازیاری باکێند و لوکسیمۆ',
-      de: 'Ermiya Heidari | Lead Back-End Entwickler & Mitgründer bei LUXIMO',
+      fa: 'ارمیا حیدری | مدیرعامل هوش‌افزار زمرد و مهندس ارشد بک‌اند',
+      en: 'Ermiya Heidari | CEO & Lead Back-End Engineer at LUXIMO',
+      ku: 'ئێرمیا حەیدەری | بەڕێوەبەری جێبەجێکار (CEO) و ئەندازیاری باکێند',
+      de: 'Ermiya Heidari | CEO & Lead Back-End Entwickler bei LUXIMO',
     };
     document.title = titles[currentLang];
   }, [currentLang]);

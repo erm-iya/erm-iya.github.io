@@ -60,7 +60,7 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
         output = (
           <div className="space-y-1 text-slate-300">
             <p className="font-bold text-white">Ermiya Heidari (ارمیا حیدری)</p>
-            <p className="text-teal-400">Co-Founder & Lead Back-End Engineer at Hoosh Afzar Zomorrod (LUXIMO)</p>
+            <p className="text-teal-400">CEO & Lead Back-End Engineer at Hoosh Afzar Zomorrod (LUXIMO)</p>
             <p className="text-xs text-slate-400">Focus: Node.js, Real-Time Socket.io, MongoDB, PcPos Bank Bridges, Linux Automation.</p>
           </div>
         );
