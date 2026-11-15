@@ -2,7 +2,7 @@ import React from 'react';
 import type { Language } from '../data/translations';
 import { translations } from '../data/translations';
 import { Button } from './ui/button';
-import { Moon, Sun, Terminal as TerminalIcon, Sparkles } from 'lucide-react';
+import { Moon, Sun, Terminal as TerminalIcon, Send } from 'lucide-react';
 import { FlagIR, FlagGB, FlagKU, FlagDE } from './Flags';
 
 interface NavbarProps {
@@ -143,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Contact CTA */}
           <a href="#contact" className="hidden sm:inline-block">
             <Button variant="serene" size="sm" className="gap-1.5 text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Send className="w-3.5 h-3.5" />
               <span>{t.nav.contact}</span>
             </Button>
           </a>

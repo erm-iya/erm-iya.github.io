@@ -18,16 +18,13 @@ export interface Translation {
     subheadline: string;
     ctaProjects: string;
     ctaContact: string;
-    stats: {
-      uptime: string;
-      uptimeLabel: string;
-      users: string;
-      usersLabel: string;
-      latency: string;
-      latencyLabel: string;
-      years: string;
-      yearsLabel: string;
-    };
+    activeWorkTitle: string;
+    luximoTitle: string;
+    luximoBadge: string;
+    luximoDesc: string;
+    darvishkhanTitle: string;
+    darvishkhanBadge: string;
+    darvishkhanDesc: string;
   };
   about: {
     title: string;
@@ -154,46 +151,43 @@ export const translations: Record<Language, Translation> = {
       resume: "رزومه",
     },
     hero: {
-      statusBadge: "آماده برای پروژه‌ها و چالش‌های نوآورانه",
+      statusBadge: "",
       greeting: "سلام، من",
       name: "ارمیا حیدری",
-      role: "توسعه‌دهنده ارشد بک‌اند و هم‌بنیان‌گذار لوکسیمو هستم",
-      headline: "خلق زیرساخت‌های مقیاس‌پذیر و سیستم‌های بلادرنگ با نهایت پایداری",
-      subheadline: "تلفیق منطق عمیق برنامه‌نویسی سمت سرور با زیبایی و ظرافت مینیمال. تخصص در معماری‌های Real-Time با Node.js/MongoDB، یکپارچه‌سازی سخت‌افزاری و اتوماسیون‌های ابری.",
+      role: "توسعه‌دهنده بک‌اند و هم‌بنیان‌گذار شرکت هوش‌افزار زمرد (لوکسیمو)",
+      headline: "توسعه سیستم‌های بلادرنگ، معماری بک‌اند و یکپارچه‌سازی سخت‌افزار",
+      subheadline: "طراحی و استقرار میکروسرویس‌های Node.js و MongoDB، پل‌های ارتباطی سخت‌افزاری با پایانه‌های پوز بانکی، و توسعه اتوماسیون‌های لینوکس و تلگرام.",
       ctaProjects: "مشاهده پروژه‌ها",
       ctaContact: "ارتباط مستقیم",
-      stats: {
-        uptime: "99.99%",
-        uptimeLabel: "آپتایم سرورها",
-        users: "+15 / +10K",
-        usersLabel: "سیستم‌ها و رکوردهای پردازش‌شده",
-        latency: "<50ms",
-        latencyLabel: "تاخیر سینک Real-Time",
-        years: "+6",
-        yearsLabel: "سال تجربه توسعه",
-      },
+      activeWorkTitle: "پروژه‌ها و وضعیت فعلی",
+      luximoTitle: "شرکت هوش‌افزار زمرد (لوکسیمو)",
+      luximoBadge: "فعال در ۱۵+ رستوران",
+      luximoDesc: "پلتفرم ابری اتوماسیون و سفارش‌گیری رستوران با دامنه luximo.ir؛ در حال استفاده توسط بیش از ۱۵ کافه و رستوران مطرح.",
+      darvishkhanTitle: "فروشگاه و آموزشگاه موسیقی درویش‌خان",
+      darvishkhanBadge: "در حال توسعه",
+      darvishkhanDesc: "فروشگاه آنلاین آلات موسیقی و سامانه مدیریت نوبت‌دهی کلاس‌های آموزشگاه درویش‌خان سنندج.",
     },
     about: {
       title: "درباره من",
-      subtitle: "خلق راهکارهای تمیز، با پرفورمنس بالا و ارزش‌آفرین",
-      paragraph1: "من ارمیا حیدری هستم؛ توسعه‌دهنده ارشد بک‌اند و هم‌بنیان‌گذار پلتفرم جامع ابری لوکسیمو (LUXIMO). تمرکز اصلی من بر طراحی معماری‌های تاب‌آور، سیستم‌های Real-Time و همگام‌سازی داده در لحظه است.",
-      paragraph2: "از اتصال مستقیم دستگاه‌های کارت‌خوان بانکی به مرورگر گرفته تا توسعه ربات‌های پیشرفته تلگرام و اپلیکیشن‌های موبایل با رابط کاربری روان؛ من عاشق تبدیل مسائل پیچیده فنی به تجربه‌ای ساده و دلنواز برای کاربران هستم.",
+      subtitle: "تمرکز بر پایداری سیستم، کدهای تمیز و حل چالش‌های واقعی پروداکشن",
+      paragraph1: "من ارمیا حیدری هستم؛ توسعه‌دهنده بک‌اند و هم‌بنیان‌گذار شرکت هوش‌افزار زمرد (لوکسیمو). در طول سال‌های فعالیتم، تمرکز اصلی من بر طراحی معماری‌های تاب‌آور، سیستم‌های بلادرنگ با Socket.io و پردازش داده‌های توزیع‌شده بوده است.",
+      paragraph2: "از برقراری ارتباط وب‌اپلیکیشن‌ها با پایانه‌های کارت‌خوان بانکی (PcPos) از طریق سوکت و لایه‌های نیتیو گرفته تا توسعه ربات‌های تعاملی تلگرام و اپلیکیشن‌های کاربردی، اولویت من ساخت ابزارهایی است که در دنیای واقعی با نهایت پایداری کار کنند.",
       highlights: [
         {
-          title: "معماری مقیاس‌پذیر ابری",
-          desc: "طراحی میکروسرویس‌ها و APIهای پایدار با Node.js، Express و مدیریت بهینه بار کاری.",
+          title: "معماری بک‌اند و میکروسرویس",
+          desc: "طراحی APIهای RESTful پایدار با Node.js، Express و مدل‌سازی داده در MongoDB.",
         },
         {
           title: "ارتباطات بلادرنگ (Real-Time)",
-          desc: "پیاده‌سازی سوکت‌های دوطرفه پایدار با Socket.io و کشینگ سریع درون‌حافظه‌ای RAM.",
+          desc: "همگام‌سازی لحظه‌ای داده‌ها میان سیستم‌های توزیع‌شده با Socket.io و کش سرور.",
         },
         {
-          title: "یکپارچه‌سازی سخت‌افزار و پوز",
-          desc: "اتصال نرم‌افزار به پایانه پرداخت بانکی (PcPos) و پروتکل‌های شبکه بانکی ایران.",
+          title: "اتصال به پایانه‌های پوز بانکی",
+          desc: "پل ارتباطی مستقیم مرورگر با کارت‌خوان‌های بانکی کشور (PcPos) از طریق سوکت و پروتکل‌های شبکه.",
         },
         {
-          title: "طراحی مینیمال و تجربه کاربر",
-          desc: "درک شهودی از UI/UX با ابزارهای Figma و Adobe جهت پیوند بی‌نقص فرانت و بک‌اند.",
+          title: "اتوماسیون و اسکریپتینگ",
+          desc: "توسعه بات‌های تلگرام با پایتون، اتوماسیون لینوکس و مدیریت دیتابیس‌های چند ده‌هزار کاربری.",
         },
       ],
     },
@@ -311,46 +305,43 @@ export const translations: Record<Language, Translation> = {
       resume: "Resume",
     },
     hero: {
-      statusBadge: "Available for Innovative Projects & Engineering Roles",
+      statusBadge: "",
       greeting: "Hello, I am",
       name: "Ermiya Heidari",
-      role: "Lead Back-End Engineer & Co-Founder at LUXIMO",
-      headline: "Architecting Resilient Distributed Systems & Low-Latency Real-Time Infrastructure",
-      subheadline: "Merging deep server-side logic with serene, minimalist aesthetics. Specialized in Node.js/MongoDB real-time microservices, Iranian banking POS bridges, and high-load cloud automations.",
+      role: "Back-End Engineer & Co-Founder at Hoosh Afzar Zomorrod (LUXIMO)",
+      headline: "Distributed Systems, Real-Time Architecture & Hardware Integration",
+      subheadline: "Designing and deploying Node.js/MongoDB microservices, local bank POS terminal hardware bridges, and Linux/Telegram automations.",
       ctaProjects: "Explore Projects",
       ctaContact: "Get in Touch",
-      stats: {
-        uptime: "99.99%",
-        uptimeLabel: "System Uptime",
-        users: "+15 / +10K",
-        usersLabel: "Engineered Systems & Data Records",
-        latency: "<50ms",
-        latencyLabel: "Real-Time Sync Latency",
-        years: "+6",
-        yearsLabel: "Years of Engineering",
-      },
+      activeWorkTitle: "Current Focus & Deployments",
+      luximoTitle: "Hoosh Afzar Zomorrod (LUXIMO)",
+      luximoBadge: "Live in 15+ Restaurants",
+      luximoDesc: "Cloud restaurant management SaaS at luximo.ir; running actively across 15+ premier cafes and restaurants.",
+      darvishkhanTitle: "Darvish Khan Music Shop & Academy",
+      darvishkhanBadge: "In Development",
+      darvishkhanDesc: "E-commerce platform for musical instruments and course management system for Darvish Khan Academy in Sanandaj.",
     },
     about: {
       title: "About Me",
-      subtitle: "Crafting clean, high-performance, and high-impact digital products",
-      paragraph1: "I am Ermiya Heidari, Lead Back-End Developer and Co-Founder of LUXIMO cloud SaaS platform. My passion lies in engineering resilient distributed systems, sub-second real-time state synchronization, and reliable infrastructure.",
-      paragraph2: "From building native banking POS bridges in C++/Node.js to architecting high-throughput Telegram bot platforms and mobile download managers, I thrive on turning complex engineering puzzles into elegant, delightful experiences.",
+      subtitle: "Focusing on system reliability, clean architecture, and real production performance",
+      paragraph1: "I am Ermiya Heidari, a back-end engineer and co-founder at Hoosh Afzar Zomorrod (LUXIMO). Over the past several years, my work has centered on architecting resilient server services, sub-second real-time state synchronization, and scalable data systems.",
+      paragraph2: "From connecting web applications with bank POS terminals using local sockets and native drivers to developing high-throughput Telegram bots and desktop data tools, I focus on software that runs dependably in production.",
       highlights: [
         {
-          title: "Scalable Cloud Architecture",
-          desc: "Designing resilient RESTful microservices with Node.js, Express, and structured MongoDB pipelines.",
+          title: "Backend & Microservices",
+          desc: "Designing resilient RESTful services with Node.js, Express, and structured MongoDB pipelines.",
         },
         {
           title: "Real-Time State Sync",
-          desc: "Ultra-low-latency bidirectional communications with Socket.io and in-memory server RAM caching.",
+          desc: "Low-latency bidirectional data streaming with Socket.io and in-memory server RAM caching.",
         },
         {
-          title: "Hardware & POS Integration",
-          desc: "Bridging web apps directly to banking terminals (PcPos) via DLL interop and TCP socket scanners.",
+          title: "POS Terminal Integration",
+          desc: "Connecting web apps directly to banking terminals (PcPos) via DLL interop and TCP socket protocols.",
         },
         {
-          title: "Minimal UX Intuition",
-          desc: "Deep appreciation for clean design systems, typography, and developer experience.",
+          title: "Automation & Scripting",
+          desc: "Asyncio Python Telegram bots, Linux server administration, and multi-thousand user database workflows.",
         },
       ],
     },
@@ -372,7 +363,7 @@ export const translations: Record<Language, Translation> = {
     },
     skills: {
       title: "Skills & Arsenal",
-      subtitle: "Technologies and tools I leverage daily to solve engineering challenges",
+      subtitle: "Technologies and tools I work with daily across production systems",
       categories: {
         backend: "Backend & Systems",
         frontend: "Frontend & Mobile",
@@ -468,46 +459,43 @@ export const translations: Record<Language, Translation> = {
       resume: "رزۆمە",
     },
     hero: {
-      statusBadge: "ئامادەم بۆ پڕۆژە و هاوکاری نوێ",
+      statusBadge: "",
       greeting: "سڵاو، ئەمن",
       name: "ئێرمیا حەیدەری",
-      role: "تەوسێعەدەی باکێند و هاوبەشی دامەزرێنەری لوکسیمۆم",
-      headline: "سازکردنی ژێرخانی پایەدار و سیستمە بلادەبەنگەکان بەوپەڕی هێمنی و خێرایی",
-      subheadline: "تێکەڵکردنی مەنتقی ئەندازیاری باکێند دەگەڵ دیزاینی مینیماڵ و جوان. پسپۆڕی سیستمە ڕیەڵ‌تایمەکان لەسەر بنەمای Node.js، مۆنگۆدی‌بی، پۆزی بانکی و ئۆتۆمەیشنی سرڤەر.",
+      role: "گەشەپێدەری باکێند و هاودامەزرێنەری هۆش‌ئەفزار زومڕود (لوکسیمۆ)",
+      headline: "تەلارسازی سیستەمی باکێند، خزمەتگوزاری ڕاستەوخۆ و پەیوەندی سەخت‌ئامێر",
+      subheadline: "دیزاینی مایکرۆسێرڤیسی Node.js و MongoDB، بەستنەوەی پۆزی بانکی بە نەرمەکاڵا و ئۆتۆمەیشنی سرڤەری لینوکس و بۆتی تێلێگرام.",
       ctaProjects: "دیتنی پڕۆژەکان",
       ctaContact: "پەیوەندیم پێوە بکە",
-      stats: {
-        uptime: "99.99%",
-        uptimeLabel: "ئاپتایمی سێرڤەر",
-        users: "+15 / +10K",
-        usersLabel: "سیستمی پەرەپێدراو و داتای شیکارکراو",
-        latency: "<50ms",
-        latencyLabel: "خێرایی سینک (Real-Time)",
-        years: "+6",
-        yearsLabel: "ساڵ ئەزموونی بەرنامەنووسی",
-      },
+      activeWorkTitle: "پڕۆژەکان و دۆخی ئێستا",
+      luximoTitle: "کۆمپانیای هۆش‌ئەفزار زومڕود (لوکسیمۆ)",
+      luximoBadge: "چالاک لە ١٥+ چێشتخانە",
+      luximoDesc: "سیستمی بەڕێوەبردنی چێشتخانە لەسەر دۆمەینی luximo.ir؛ چالاک لە پتر لە ١٥ کافێ و ڕێستۆرانی ناودار.",
+      darvishkhanTitle: "فرۆشگا و پەیمانگای مۆسیقای دەروێش‌خان",
+      darvishkhanBadge: "لە پەرەپێداندایە",
+      darvishkhanDesc: "فرۆشگای ئۆنلاینی ئامێری مۆسیقا و سیستمی بەڕێوەبردنی کلاسی مۆسیقای دەروێش‌خانی سنە.",
     },
     about: {
       title: "دەربارەی من",
-      subtitle: "خوڵقاندنی کدی تمیز و بەرهەمی پڕسوود بۆ خەڵک",
-      paragraph1: "ئەمن ئێرمیا حەیدەریم؛ گەشەپێدەری باکێند و هاودامەزرێنەری پلاتفۆرمی لوکسیمۆ. هەموو تەقالام ئەوەیە سیستمگەلێک ساز بکەم کە بەوپەڕی قورسی و هاتووچۆ، بە بێ کێشە و چاوترووکانێک کار بکەن.",
-      paragraph2: "لە گرێدانی ئامێرەکانی کارتی بانکییەوە بگرە هەتا دروستکردنی بۆتی پێشکەوتووی تێلێگرام و ئەپی مۆبایل؛ حەزم لێیە مەسەلە گرانەکانی کۆمپیۆتەر بکەمە ئەزموونێکی خۆش و ساکار بۆ بەکارهێنەر.",
+      subtitle: "سەرنج لەسەر بەردەوامی سیستەم، کۆدی خاوێن و چارەسەری کێشە لە پرۆداکشن",
+      paragraph1: "ئەمن ئێرمیا حەیدەریم؛ گەشەپێدەری باکێند و هاودامەزرێنەری کۆمپانیای لوکسیمۆ. لەم ساڵانەدا سەرنجی سەرەکیم لەسەر دیزاینی سیستمی قایم، داتای بەربڵاو و پەیوەندی ڕاستەوخۆ بە Socket.io بووە.",
+      paragraph2: "لە گرێدانی ئامێرەکانی کارتی بانکییەوە لە ڕێی سۆکێت و شێوازی نەیتیڤ هەتا دروستکردنی بۆتی خێرای تێلێگرام و ئەپڵیکەیشن، ئامانجم دروستکردنی نەرمەکاڵایە کە لە جیهانی ڕاستەقینەدا بەردەوام و خێرا کار بکات.",
       highlights: [
         {
-          title: "ئەندازیاری هەوری مقیاس‌پەزیر",
-          desc: "دیزاینی میکرۆسرویس و APIیە قایمەکان بە Node.js و Express.",
+          title: "باکێند و مایکرۆسێرڤیس",
+          desc: "دیزاینی RESTful API و خزمەتگوزاری قایم بە Node.js، Express و مۆدێلسازی داتا بە MongoDB.",
         },
         {
-          title: "پەیوەندی خێرا و ڕاستەوخۆ (Real-Time)",
-          desc: "بەستنەوەی سووکێتی پایەدار بە Socket.io و کەشینگی زاکیرەی RAM.",
+          title: "پەیوەندی ڕاستەوخۆ (Real-Time)",
+          desc: "سینکی آنی داتا لە نێوان سیستەمەکان بە Socket.io و کەشینگی خێرای زاکیرە.",
         },
         {
-          title: "پەیوەندی سەخت‌ئامێر و پۆز",
-          desc: "پێکەوەبەستنی نەرمەکاڵا و ئامێری پۆزی بانکی بە کدی C++ و سۆکێت.",
+          title: "گرێدانی پۆزی بانکی",
+          desc: "پردی پەیوەندی ڕاستەوخۆی وێب دەگەڵ ئامێری پۆزی بانکی لە ڕێگەی سۆکێت و پرۆتۆکۆڵی تۆڕ.",
         },
         {
-          title: "تێگەیشتن لە UI/UX",
-          desc: "دیزاینی شیک و مینیماڵ بە Figma و Photoshop بۆ جوانی بەرنامەکان.",
+          title: "ئۆتۆمەیشن و سکریپت",
+          desc: "پەرەپێدانی بۆتی تێلێگرام بە پایتۆن، ئۆتۆمەیشنی سرڤەری لینوکس و بەڕێوەبردنی داتابەیسی گەورە.",
         },
       ],
     },
@@ -625,46 +613,43 @@ export const translations: Record<Language, Translation> = {
       resume: "Lebenslauf",
     },
     hero: {
-      statusBadge: "Verfügbar für innovative Projekte & Engineering-Rollen",
+      statusBadge: "",
       greeting: "Hallo, ich bin",
       name: "Ermiya Heidari",
-      role: "Lead Back-End Entwickler & Mitgründer bei LUXIMO",
-      headline: "Architektur skalierbarer verteilter Systeme & echtzeitfähiger Infrastrukturen",
-      subheadline: "Verbindung tiefer serverseitiger Logik mit ruhiger, minimalistischer Ästhetik. Spezialisiert auf Node.js/MongoDB Echtzeit-Mikroservices, POS-Hardware-Integration und Cloud-Automatisierung.",
+      role: "Back-End Entwickler & Mitgründer bei Hoosh Afzar Zomorrod (LUXIMO)",
+      headline: "Verteilte Systeme, Echtzeit-Architektur & Hardware-Integration",
+      subheadline: "Entwicklung und Bereitstellung von Node.js- und MongoDB-Microservices, Bank-POS-Hardware-Schnittstellen und Linux-/Telegram-Automatisierungen.",
       ctaProjects: "Projekte ansehen",
       ctaContact: "Kontakt aufnehmen",
-      stats: {
-        uptime: "99.99%",
-        uptimeLabel: "Systemverfügbarkeit",
-        users: "+15 / +10K",
-        usersLabel: "Systeme & verarbeitete Datensätze",
-        latency: "<50ms",
-        latencyLabel: "Echtzeit-Latenz",
-        years: "+6",
-        yearsLabel: "Jahre Erfahrung",
-      },
+      activeWorkTitle: "Aktuelle Projekte & Status",
+      luximoTitle: "Hoosh Afzar Zomorrod (LUXIMO)",
+      luximoBadge: "Aktiv in 15+ Restaurants",
+      luximoDesc: "Cloud-SaaS für Restaurantmanagement auf luximo.ir; im operativen Einsatz bei über 15 führenden Gastronomiebetrieben.",
+      darvishkhanTitle: "Musik-Shop & Akademie Darvish Khan",
+      darvishkhanBadge: "In Entwicklung",
+      darvishkhanDesc: "Online-Shop für Musikinstrumente und Kursverwaltungssystem für die Darvish-Khan-Akademie in Sanandaj.",
     },
     about: {
       title: "Über mich",
-      subtitle: "Entwicklung eleganter, performanter und langlebiger Softwarelösungen",
-      paragraph1: "Ich bin Ermiya Heidari, Lead Back-End Entwickler und Mitgründer der Cloud-Plattform LUXIMO. Mein Hauptfokus liegt auf resilienten Systemarchitekturen, Echtzeit-Datensynchronisation und skalierbaren Microservices.",
-      paragraph2: "Von der hardwarenahen Anbindung iranischer Bank-POS-Terminals über hochlastfähige Telegram-Bots bis hin zu reaktiven mobilen Download-Managern liebe ich es, komplexe Herausforderungen in intuitive und ästhetische Erlebnisse zu verwandeln.",
+      subtitle: "Fokus auf Systemstabilität, sauberen Code und reale Produktionsanforderungen",
+      paragraph1: "Ich bin Ermiya Heidari, Back-End Entwickler und Mitgründer von Hoosh Afzar Zomorrod (LUXIMO). Mein Arbeitsschwerpunkt liegt auf resilienten Serverarchitekturen, Echtzeit-Datensynchronisation mit Socket.io und verteilten Datensystemen.",
+      paragraph2: "Von der Anbindung von Webanwendungen an Bank-POS-Terminals über Sockets und native Treiber bis hin zu Telegram-Bots und Desktop-Tools baue ich Software, die im Produktivbetrieb zuverlässig funktioniert.",
       highlights: [
         {
-          title: "Skalierbare Cloud-Architektur",
-          desc: "Robuste RESTful-APIs und Microservices mit Node.js, Express und performanten MongoDB-Pipelines.",
+          title: "Backend & Microservices",
+          desc: "RESTful-APIs und Services mit Node.js, Express und strukturierter Datenmodellierung in MongoDB.",
         },
         {
           title: "Echtzeit-Synchronisation",
-          desc: "Latenzarme bidirektionale Kommunikation mit Socket.io und In-Memory-RAM-Caching.",
+          desc: "Bidirektionale Datenübertragung mit geringer Latenz via Socket.io und In-Memory-Server-Caching.",
         },
         {
-          title: "Hardware- & POS-Integration",
-          desc: "Direkte Brücken zwischen Webapplikationen und Kartenterminals via DLL-Interop & TCP-Sockets.",
+          title: "Bank-POS-Integration",
+          desc: "Direkte Schnittstelle zwischen Browser und Bankterminals (PcPos) über Socket- und Netzwerkprotokolle.",
         },
         {
-          title: "Minimalistisches UX-Gespür",
-          desc: "Harmonische Verbindung von Backend-Effizienz mit sauberer Typografie und visueller Ruhe.",
+          title: "Automatisierung & Skripte",
+          desc: "Telegram-Bots mit Python, Linux-Serverautomatisierung und Verwaltung großer Datensätze.",
         },
       ],
     },

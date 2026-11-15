@@ -50,7 +50,7 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
             <p><span className="text-emerald-400 font-mono">projects</span> - List flagship engineering projects</p>
             <p><span className="text-emerald-400 font-mono">skills</span> - Display key technical competencies</p>
             <p><span className="text-emerald-400 font-mono">contact</span> - Get direct channels of communication</p>
-            <p><span className="text-emerald-400 font-mono">hire</span> - Initiate partnership sequence ✨</p>
+            <p><span className="text-emerald-400 font-mono">hire</span> - Get in touch for collaboration</p>
             <p><span className="text-emerald-400 font-mono">clear</span> - Clean up terminal buffer</p>
           </div>
         );
@@ -60,8 +60,8 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
         output = (
           <div className="space-y-1 text-slate-300">
             <p className="font-bold text-white">Ermiya Heidari (ارمیا حیدری)</p>
-            <p className="text-teal-400">Co-Founder & Lead Back-End Engineer at LUXIMO</p>
-            <p className="text-xs text-slate-400">Focus: Node.js, Real-Time Socket.io, MongoDB, PcPos Bank Bridges, Cloud Automation.</p>
+            <p className="text-teal-400">Co-Founder & Lead Back-End Engineer at Hoosh Afzar Zomorrod (LUXIMO)</p>
+            <p className="text-xs text-slate-400">Focus: Node.js, Real-Time Socket.io, MongoDB, PcPos Bank Bridges, Linux Automation.</p>
           </div>
         );
         break;
@@ -69,11 +69,11 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
       case 'projects':
         output = (
           <div className="space-y-1.5 text-slate-300">
-            <p className="text-teal-400 font-bold">Top Engineered Systems:</p>
-            <p>1. <span className="text-white font-bold">LUXIMO Core:</span> Multi-tenant Real-time SaaS platform (Node/Mongo/Socket.io)</p>
-            <p>2. <span className="text-white font-bold">LUXIMO PcPos:</span> Direct banking terminal hardware bridge (C++/TCP Sockets)</p>
-            <p>3. <span className="text-white font-bold">Medical Curve Organizer:</span> Desktop data pipeline & analytics for patient curves (Python/Tkinter/Pandas)</p>
-            <p>4. <span className="text-white font-bold">IosDLmanager:</span> Mobile downloader app with liquid glass UI (React Native/Expo)</p>
+            <p className="text-teal-400 font-bold">Key Engineering Projects:</p>
+            <p>1. <span className="text-white font-bold">LUXIMO Core:</span> Multi-tenant real-time restaurant SaaS deployed across 15+ cafes & restaurants (luximo.ir)</p>
+            <p>2. <span className="text-white font-bold">Darvish Khan Shop:</span> Online music instruments store & academy reservation platform (In Active Development)</p>
+            <p>3. <span className="text-white font-bold">LUXIMO PcPos:</span> Direct banking terminal hardware bridge (C++/TCP Sockets)</p>
+            <p>4. <span className="text-white font-bold">Medical Curve Organizer:</span> Desktop data pipeline & analytics for patient curves (Python/Tkinter/Pandas)</p>
             <p>5. <span className="text-white font-bold">TTM Task Bot:</span> Telegram enterprise task manager with Gantt charts & aiosqlite</p>
           </div>
         );
@@ -82,11 +82,11 @@ export const DevConsole: React.FC<DevConsoleProps> = ({ currentLang, isOpen, onC
       case 'skills':
         output = (
           <div className="space-y-1 text-slate-300">
-            <p className="text-teal-400 font-bold">Calibrated Core Stack (Production & Project-Tested):</p>
-            <p>• Node.js & Express (90%) | Python & Data Analytics (90%) | PHP & Automation (90%)</p>
-            <p>• Socket.io (88%) | Databases: MongoDB & SQLite (85%) | C++ & POS DLL Interop (60%)</p>
-            <p>• JavaScript ES6+ (90%) | React & Vite (80%) | TypeScript (80%) | React Native (75%)</p>
-            <p>• Telegram Bots (90%) | Linux & cPanel (85%) | Photoshop (100%) | Illustrator (100%)</p>
+            <p className="text-teal-400 font-bold">Core Production Stack:</p>
+            <p>• <span className="text-white font-semibold">Backend:</span> Node.js, Express, Socket.io, MongoDB, SQLite, PHP</p>
+            <p>• <span className="text-white font-semibold">Hardware:</span> C++ DLL Interop, Local TCP/IP Sockets, PcPos Terminals</p>
+            <p>• <span className="text-white font-semibold">Frontend & Mobile:</span> TypeScript, React, Vite, React Native (Expo)</p>
+            <p>• <span className="text-white font-semibold">Automation & Infra:</span> Python (Asyncio), Telegram Bots, Linux, cPanel API</p>
           </div>
         );
         break;

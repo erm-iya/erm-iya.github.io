@@ -1,12 +1,12 @@
 import type { Language } from '../data/translations';
 import { translations } from '../data/translations';
-import { Cloud, Zap, Cpu, Sparkles } from 'lucide-react';
+import { Server, Zap, Cpu, Terminal } from 'lucide-react';
 
 interface AboutSectionProps {
   currentLang: Language;
 }
 
-const icons = [Cloud, Zap, Cpu, Sparkles];
+const icons = [Server, Zap, Cpu, Terminal];
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
   const t = translations[currentLang];

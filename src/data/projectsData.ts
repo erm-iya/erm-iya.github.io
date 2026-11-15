@@ -13,6 +13,7 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   iconName: string;
+  logo?: string;
 }
 
 export const projectsData: ProjectItem[] = [
@@ -23,58 +24,121 @@ export const projectsData: ProjectItem[] = [
     id: 'luximo-core',
     category: 'saas',
     iconName: 'Server',
-    metrics: '99.99% Uptime | <50ms Sync',
+    logo: '/images/luximo.png',
+    metrics: 'Active in 15+ Cafes & Restaurants',
     tags: ['Node.js', 'Express', 'MongoDB', 'Socket.io', 'RAM Cache', 'Microservices'],
     liveUrl: 'https://luximo.ir',
     githubUrl: 'https://github.com/erm-iya',
     title: {
-      fa: 'پلتفرم ابری لوکسیمو (LUXIMO Cloud SaaS)',
-      en: 'LUXIMO Cloud SaaS & Core Architecture',
-      ku: 'پلاتفۆرمی هەوری لوکسیمۆ (LUXIMO SaaS)',
-      de: 'LUXIMO Cloud SaaS & Kerninfrastruktur',
+      fa: 'پلتفرم ابری لوکسیمو (شرکت هوش‌افزار زمرد)',
+      en: 'LUXIMO Cloud SaaS (Hoosh Afzar Zomorrod)',
+      ku: 'پلاتفۆرمی هەوری لوکسیمۆ (هۆش‌ئەفزار زومڕود)',
+      de: 'LUXIMO Cloud SaaS (Hoosh Afzar Zomorrod)',
     },
     summary: {
-      fa: 'معماری و توسعه زیرساخت بلادرنگ پلتفرم جامع مدیریت رستوران با پردازش بار سنگین.',
-      en: 'Architected the scalable real-time cloud SaaS for complete restaurant & retail management.',
-      ku: 'تەلارسازی ژێرخانی هەوری لوکسیمۆ بۆ بەڕێوەبردنی چێشتخانە و هۆتێل بە سووکێت و مۆنگۆ.',
-      de: 'Skalierbare Echtzeit-Cloud-Infrastruktur für ganzheitliches Restaurant- und Gastronomiemanagement.',
+      fa: 'معماری و توسعه زیرساخت بلادرنگ پلتفرم جامع مدیریت رستوران؛ در حال استفاده فعال توسط بیش از ۱۵ کافه و رستوران مطرح (luximo.ir).',
+      en: 'Architected the scalable real-time cloud SaaS for complete restaurant management; running actively in 15+ premier cafes and restaurants via luximo.ir.',
+      ku: 'تەلارسازی ژێرخانی هەوری لوکسیمۆ بۆ بەڕێوەبردنی چێشتخانە؛ لە حاڵی بەکارهێنان لە لایەن زیاتر لە ١٥ کافێ و ڕێستۆرانی ناودار.',
+      de: 'Skalierbare Echtzeit-Cloud-Infrastruktur für Restaurantmanagement; im operativen Einsatz bei über 15 führenden Gastronomiebetrieben.',
     },
     description: {
-      fa: 'طراحی صفر تا صد زیرساخت سمت سرور پلتفرم لوکسیمو. این سیستم اتصال و همگام‌سازی آنی میان پنل‌های صندوق، تبلت‌های سفارش‌گیری گارسون، مانیتورهای آشپزخانه و منوی دیجیتال مشتریان را بدون افت اتصال مدیریت می‌کند.',
-      en: 'Engineered the core server infrastructure for LUXIMO from scratch. Handles instant state synchronization between POS cash registers, waiter tablets, kitchen monitors, and customer digital menus with zero dropouts.',
-      ku: 'دیزاین و پەرەپێدانی تەواوی باکێندی لوکسیمۆ. ئەم سیستمە پەیوەندی و سینکی آنی لە نێوان سندووق، میواندار، چێشتخانە و مێنیوی دیجیتالی موشتەری ڕادەگرێت بە بێ وەستان.',
-      de: 'Entwicklung der gesamten Backend-Infrastruktur für LUXIMO von Grund auf. Ermöglicht nahtlose Zustandssynchronisation zwischen Kassen, Kellner-Tablets, Küchenmonitoren und Gästemenüs.',
+      fa: 'طراحی صفر تا صد زیرساخت سمت سرور پلتفرم لوکسیمو برای شرکت هوش‌افزار زمرد. این سیستم اتصال و همگام‌سازی آنی میان پنل‌های صندوق، تبلت‌های سفارش‌گیری گارسون، مانیتورهای آشپزخانه و منوی دیجیتال مشتریان را در بیش از ۱۵ رستوران بدون افت اتصال مدیریت می‌کند.',
+      en: 'Engineered the server infrastructure for LUXIMO (Hoosh Afzar Zomorrod). Handles instant state synchronization between POS cash registers, waiter tablets, kitchen monitors, and customer digital menus across 15+ active restaurant branches with zero dropouts.',
+      ku: 'دیزاین و پەرەپێدانی تەواوی باکێندی لوکسیمۆ بۆ کۆمپانیای هۆش‌ئەفزار زومڕود. سینکی ڕاستەوخۆ لە نێوان سندووق، گارسۆن و چێشتخانە لە پتر لە ١٥ ڕێستۆران.',
+      de: 'Entwicklung der gesamten Backend-Infrastruktur für LUXIMO (Hoosh Afzar Zomorrod). Ermöglicht synchrone Datenverwaltung zwischen Kassen, Kellner-Tablets und Küchenmonitoren bei 15+ Betrieben.',
     },
     architecture: {
-      fa: 'پیاده‌سازی سوکت‌های پایدار Socket.io با قابلیت Reconnection خودکار، سیستم کشینگ حافظه موقت (RAM Caching) برای افزایش چشمگیر سرعت پاسخ‌دهی APIها، و منطق محاسباتی چندلایه برای فاکتور و پرداخت دنگی.',
-      en: 'Resilient Socket.io architecture with automatic reconnection pipelines, server-side in-memory RAM caching for sub-50ms API throughput, and complex multi-party split-bill financial logic.',
-      ku: 'سوودوەرگرتن لە Socket.io بۆ پێوەندی هەمیشەیی، سیستمی کەشینگی ناو RAM بۆ خێرایی سەرسوڕهێنەری وەڵامی API، و مەنتقی ژمێریاری پڕوردی پسووڵە.',
-      de: 'Stabile Socket.io-Architektur mit automatischem Reconnect, serverinternem RAM-Caching für Reaktionszeiten unter 50 ms sowie mehrschichtiger Splittungs- und Abrechnungslogik.',
+      fa: 'پیاده‌سازی سوکت‌های پایدار Socket.io با قابلیت Reconnection خودکار، سیستم کشینگ حافظه موقت (RAM Caching) برای افزایش سرعت پاسخ‌دهی APIها، و منطق محاسباتی چندلایه برای فاکتور و پرداخت دنگی.',
+      en: 'Socket.io architecture with automatic reconnection pipelines, server-side in-memory RAM caching for low-latency API throughput, and multi-party split-bill financial logic.',
+      ku: 'سوودوەرگرتن لە Socket.io بۆ پێوەندی هەمیشەیی، سیستمی کەشینگی ناو RAM بۆ خێرایی وەڵامی API، و مەنتقی ژمێریاری پسووڵە.',
+      de: 'Stabile Socket.io-Architektur mit automatischem Reconnect, serverinternem RAM-Caching für schnelle Antwortzeiten sowie Splittungs- und Abrechnungslogik.',
     },
     keyFeatures: {
       fa: [
-        'همگام‌سازی بلادرنگ کلیه سفارش‌ها زیر ۵۰ میلی‌ثانیه',
+        'همگام‌سازی بلادرنگ کلیه سفارش‌ها میان پرسنل و صندوق',
         'موتور کش درون‌حافظه‌ای جهت کاهش چشمگیر کوئری‌های تکراری دیتابیس',
-        'تولید خودکار Sitemap پویا با رندر سمت سرور برای سئوی برتر',
-        'پشتیبانی از چندشعبه‌ای و چندمستاجری (Multi-tenant)',
+        'تولید خودکار Sitemap پویا با رندر سمت سرور برای سئوی برندها',
+        'پشتیبانی کامل از چندشعبه‌ای و چندمستاجری (Multi-tenant)',
       ],
       en: [
-        'Sub-50ms real-time state synchronization across all terminal devices',
-        'In-memory RAM caching layer drastically slashing redundant database reads',
-        'Automated dynamic SSR sitemap generation for rapid Google indexing',
+        'Real-time state synchronization across all restaurant terminal devices',
+        'In-memory RAM caching layer reducing redundant database reads',
+        'Automated dynamic SSR sitemap generation for client search visibility',
         'Multi-branch and multi-tenant enterprise data partitioning',
       ],
       ku: [
-        'سینکی ڕاستەوخۆی دەستووری خواردنەکان ژێر ٥٠ میلی‌چرکە',
+        'سینکی ڕاستەوخۆی دەستووری خواردنەکان لە نێوان کارمەندان',
         'کەشینگی ناو RAM بۆ کەمکردنەوەی فەرمانەکانی سەر داتابەیس',
         'دروستکردنی ئۆتۆماتیکی سایت‌ماپ بۆ سێئۆی گۆگڵ',
         'پشتیوانی فرەلق و فرەبەکارهێنەر',
       ],
       de: [
-        'Echtzeit-Statussynchronisation unter 50 ms auf allen Endgeräten',
-        'In-Memory-RAM-Cache zur drastischen Reduzierung von Datenbankabfragen',
-        'Automatische dynamische SSR-Sitemap-Generierung für Google-SEO',
+        'Echtzeit-Statussynchronisation auf allen Kassengeräten',
+        'In-Memory-RAM-Cache zur Reduzierung von Datenbankabfragen',
+        'Automatische dynamische SSR-Sitemap-Generierung',
         'Mandantenfähige Mandanten- und Filialunterstützung',
+      ],
+    },
+  },
+
+  // ==========================================
+  // 2. Darvish Khan Music Shop & Academy (E-Commerce & SaaS)
+  // ==========================================
+  {
+    id: 'darvishkhan-shop',
+    category: 'saas',
+    iconName: 'Server',
+    logo: '/images/darvishkhan_sanandaj.png',
+    metrics: 'In Active Development',
+    tags: ['Node.js', 'React', 'MongoDB', 'E-Commerce', 'Payment Gateway', 'Reservation'],
+    title: {
+      fa: 'آنلاین شاپ و وبسایت موسیقی درویش‌خان',
+      en: 'Darvish Khan Music Shop & Academy',
+      ku: 'فرۆشگا و پەیمانگای مۆسیقای دەروێش‌خان',
+      de: 'Darvish Khan Musik-Shop & Akademie',
+    },
+    summary: {
+      fa: 'فروشگاه اینترنتی ساز و آلات موسیقی و سامانه رزرو دوره‌های آموزشی درویش‌خان سنندج (در حال توسعه).',
+      en: 'Online musical instrument store and academy course reservation platform for Darvish Khan (in active development).',
+      ku: 'فرۆشگای ئۆنلاینی ئامێری مۆسیقا و پلاتفۆرمی بەڕێوەبردنی کلاسی مۆسیقای دەروێش‌خان لە سنە (لە حاڵی پەرەپێدان).',
+      de: 'Online-Shop für Musikinstrumente und Kursbuchungssystem für die Darvish-Khan-Musikakademie in Sanandaj (in aktiver Entwicklung).',
+    },
+    description: {
+      fa: 'طراحی و پیاده‌سازی زیرساخت فروشگاهی و سامانه رزرواسیون آموزشگاه موسیقی درویش‌خان سنندج. این پروژه شامل کاتالوگ جامع سازهای سنتی و مدرن، درگاه پرداخت امن بانکی، پنل مدیریت موجودی انبار، و سیستم ثبت‌نام و زمان‌بندی آنلاین هنرجویان است.',
+      en: 'Architecting the full e-commerce and student portal platform for Darvish Khan music center in Sanandaj. Features comprehensive instrument cataloging, secure banking payment gateways, inventory management, and student course scheduling.',
+      ku: 'تەلارسازی پلاتفۆرمی فرۆشگا و پەیمانگای مۆسیقای دەروێش‌خان لە سنە. داگری فرۆشتنی ئامێرەکان، دەرگای پارەدان، بەڕێوەبردنی کۆگا و ناونووسی قوتابیان.',
+      de: 'Entwicklung der E-Commerce- und Akademieverwaltungsplattform für das Darvish-Khan-Musikzentrum in Sanandaj mit Instrumentenkatalog, Zahlungsintegration und Kursbuchung.',
+    },
+    architecture: {
+      fa: 'معماری ماژولار با Node.js و Express همراه با دیتابیس MongoDB، یکپارچه‌سازی با درگاه‌های پرداخت شاپرک و اعتبارسنجی نشست‌های کاربران.',
+      en: 'Modular architecture built on Node.js and Express with MongoDB, integrated with national banking payment gateways and secure session management.',
+      ku: 'تەلارسازی ماژۆلار بە Node.js و Express و MongoDB دەگەڵ دەرگای پارەدانی بانکی.',
+      de: 'Modulare Architektur auf Basis von Node.js, Express und MongoDB mit Bank-Gateway-Integration.',
+    },
+    keyFeatures: {
+      fa: [
+        'کاتالوگ دسته‌بندی‌شده انواع سازهای موسیقی ایرانی و کلاسیک',
+        'سامانه رزرواسیون و انتخاب زمان کلاس اساتید موسیقی',
+        'درگاه پرداخت شاپرک با صدور فاکتور آنی و رهگیری سفارش',
+        'پنل اختصاصی مدیریت سفارشات، تخفیف‌ها و انبارداری',
+      ],
+      en: [
+        'Categorized musical instruments catalog with spec sheets',
+        'Instructor class booking and scheduling workflow',
+        'Direct banking payment gateway with instant invoicing',
+        'Custom dashboard for stock, discounts, and order tracking',
+      ],
+      ku: [
+        'کاتالۆگی تایبەتی ئامێرە مۆسیقاییەکان',
+        'سیستمی نۆرەگرتنی کلاسی مامۆستایان',
+        'دەرگای پارەدانی فەرمی دەگەڵ پسووڵە',
+        'پانێڵی بەڕێوەبردنی کۆگا و کڕینەکان',
+      ],
+      de: [
+        'Katalogisierter Musikinstrumente-Shop',
+        'Terminbuchungssystem für Musiklehrer',
+        'Direkte Bank-Zahlungsschnittstelle',
+        'Bestell- und Lagerverwaltung',
       ],
     },
   },
@@ -109,7 +173,7 @@ export const projectsData: ProjectItem[] = [
     },
     architecture: {
       fa: 'استفاده از DLLهای نیتیو C++ (نظیر Saman SSP1126 و PEC)، اسکنر سوکت TCP/IP در شبکه محلی، و یک سرور میکرو WebSocket سبک روی سیستم صندوق.',
-      en: 'Leveraged native C++ DLL interop, local network TCP/IP socket scanners, and an ultra-lightweight WebSocket gateway running locally on the POS machine.',
+      en: 'Used native C++ DLL interop, local network TCP/IP socket scanners, and an ultra-lightweight WebSocket gateway running locally on the POS machine.',
       ku: 'کەڵکوەرگرتن لە DLLـەکانی C++ و سکانەری تۆڕی TCP/IP و سرڤەرێکی سووکی WebSocket لەسەر سیستمی سندووق.',
       de: 'Nutzung nativer C++-DLL-Schnittstellen, lokaler TCP/IP-Netzwerkscanner und eines ressourcenschonenden WebSocket-Gateways auf dem Kassensystem.',
     },
@@ -295,7 +359,7 @@ export const projectsData: ProjectItem[] = [
     },
     architecture: {
       fa: 'استفاده از Expo FileSystem برای ذخیره‌سازی ایزوله، مدیریت صف دانلود مالتی‌ترد، و پکیج‌های اختصاصی بلور شیشه‌ای برای رسیدن به بالاترین نرخ ۶۰ فریم بر ثانیه.',
-      en: 'Leveraged native Expo FileSystem background tasks, multi-threaded download chunking, and performant hardware-accelerated glass blur shaders.',
+      en: 'Used native Expo FileSystem background tasks, multi-threaded download chunking, and performant hardware-accelerated glass blur shaders.',
       ku: 'کەڵکوەرگرتن لە FileSystemی نەیتیڤ بۆ پاشەکەوتی داگرتنەکان و شوشەیی کردنی پەڕەکان بە شێوازی ۶۰ فریم.',
       de: 'Nutzung von Expo FileSystem Background Tasks, mehrfädigen Download-Queues und GPU-beschleunigten Glas-Blur-Shadern.',
     },
@@ -308,7 +372,7 @@ export const projectsData: ProjectItem[] = [
       ],
       en: [
         'State-of-the-art liquid glassmorphic aesthetics adhering to Apple HIG',
-        'Resilient background downloading resuming seamlessly on connection loss',
+        'Background downloading with auto-resume on connection loss',
         'Smart automatic file sorting (media, audio, archives, documents)',
         'Built-in media player for instant preview and playback',
       ],
@@ -413,7 +477,7 @@ export const projectsData: ProjectItem[] = [
     },
     description: {
       fa: 'پلتفرمی کاربردی برای دانشجویان و مدیران آموزش جهت شبیه‌سازی انتخاب واحد، جلوگیری از تداخل ساعت کلاس‌ها و روزهای امتحان پایانی، و طراحی هفتگی برنامه درسی در محیطی ساخت‌یافته و ساده.',
-      en: 'Practical platform engineered for students and academic advisors to simulate course registrations, eliminate class schedule collisions, prevent exam date overlaps, and visualize weekly schedules seamlessly.',
+      en: 'Practical platform engineered for students and academic advisors to simulate course registrations, eliminate class schedule collisions, prevent exam date overlaps, and visualize weekly schedules.',
       ku: 'بەرنامەیەکی بەسوود بۆ خوێندکاران و مامۆستایان تا بە بێ کێشە و تێکچوونی کاتی وانەکان، کاتی هەفتانەی خوێندن ڕێکبخەن.',
       de: 'Praktische Plattform für Studierende und Fakultäten zur Simulation von Kurswahlen, Vermeidung von Vorlesungsüberlappungen und visuellen Stundenplangestaltung.',
     },
@@ -537,13 +601,13 @@ export const projectsData: ProjectItem[] = [
     },
     description: {
       fa: 'طراحی اسکریپت‌های تحویل آنی هاست و اتصال یکپارچه تلگرام به APIهای cPanel و سرورهای لینوکس، که امکان مدیریت کامل وب‌سرور، ساخت دیتابیس و ایمیل را مستقیماً از تلگرام به کاربران می‌داد.',
-      en: 'Engineered autonomous server provisioning workflows and Telegram-to-cPanel integrations, empowering users to configure web servers, databases, and mailboxes directly from chat.',
+      en: 'Engineered autonomous server provisioning workflows and Telegram-to-cPanel integrations, allowing users to configure web servers, databases, and mailboxes directly from chat.',
       ku: 'نووسینی بەرنامەی ئۆتۆماتیکی دابینکردنی هاست و بەستنەوەی تێلێگرام بە cPanel بۆ دروستکردنی داتابەیس و ئیمەیل.',
       de: 'Entwicklung automatisierter Hosting-Bereitstellungsskripte und Integration von Telegram in cPanel-APIs zur direkten Serververwaltung über Chat-Befehle.',
     },
     architecture: {
       fa: 'توسعه ماژول‌های PHP و Python برای هندل کردن وب‌هوک‌ها، برقراری ارتباط امن با پروتکل SSH و APIهای سرور با نرخ خطای صفر.',
-      en: 'Developed robust PHP and Python orchestration daemons communicating over secure SSH tunnels and authenticating against cPanel/WHM API endpoints.',
+      en: 'Built reliable PHP and Python orchestration daemons communicating over secure SSH tunnels and authenticating against cPanel/WHM API endpoints.',
       ku: 'بەکارهێنانی پایتۆن و PHP بۆ پێوەندی ئەمن دەگەڵ سێرڤەر لە ڕێی SSH.',
       de: 'Robuste PHP- und Python-Dämonen über gesicherte SSH-Tunnel zur Authentifizierung an cPanel/WHM-Endpunkten.',
     },

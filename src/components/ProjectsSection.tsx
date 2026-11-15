@@ -66,10 +66,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
 
   return (
     <section id="projects" className="py-16 sm:py-20 px-3.5 sm:px-8 relative overflow-hidden">
-      
-      {/* Ambient background blur */}
-      <div className="ambient-glow-teal top-1/3 -start-20 w-[450px] h-[450px] opacity-10 dark:opacity-15"></div>
-
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Section Heading */}
@@ -111,9 +107,15 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                 <div>
                   <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-4">
                     <div className="flex items-start justify-between gap-2 mb-3">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all shrink-0">
-                        <Icon className="w-5 h-5" />
-                      </div>
+                      {project.logo ? (
+                        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-900 border border-slate-700/50 p-1 flex items-center justify-center shrink-0">
+                          <img src={project.logo} alt="" className="w-full h-full object-contain" />
+                        </div>
+                      ) : (
+                        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center group-hover:scale-105 group-hover:bg-teal-500/20 transition-all shrink-0">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                      )}
                       {project.metrics && (
                         <Badge variant="teal" className="text-[10px] font-mono text-end max-w-[calc(100%-3.2rem)] truncate shrink-0">
                           {project.metrics}

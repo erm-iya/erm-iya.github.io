@@ -66,6 +66,12 @@ This document is the persistent memory and single source of truth for architectu
   - Disabled `0-RTT Connection Resumption` to avoid anti-replay / TLS packet inspection delays.
 - **Verification**: Browser falls back directly to HTTP/2 with sub-second asset delivery.
 
+## 2026-11-15: Complete Elimination of AI Slop & Addition of Current Active Work
+- **Decision / Change**: Applied `petergyang/no-ai-slop` principles across copy, UI, and data models. Removed banned words (`leveraged`, `empowering`, `robust`, `seamlessly`, `leverage`, `crafting`), eliminated fake cloud metrics (`99.99% Uptime`, `<50ms Latency`) and video-game progress bars in skills. Replaced hero vanity metrics with real active deployments: Hoosh Afzar Zomorrod (LUXIMO live across 15+ restaurants via `luximo.ir`) and Darvish Khan Music Shop & Academy (`darvishkhan_sanandaj.png` in active development).
+- **to_do**: Continue frontend integration for Darvish Khan online music shop and academy reservation system.
+- **to_remember**: Do not reintroduce arbitrary skill percentages or generic AI marketing buzzwords; keep copy direct, active, and grounded in concrete engineering facts.
+
+
 
 
 
