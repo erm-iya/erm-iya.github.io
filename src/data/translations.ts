@@ -25,6 +25,9 @@ export interface Translation {
     darvishkhanTitle: string;
     darvishkhanBadge: string;
     darvishkhanDesc: string;
+    foxloaderTitle: string;
+    foxloaderBadge: string;
+    foxloaderDesc: string;
   };
   about: {
     title: string;
@@ -51,6 +54,7 @@ export interface Translation {
     keyFeatures: string;
     techStack: string;
     architecture: string;
+    confidentialBadge: string;
   };
   skills: {
     title: string;
@@ -160,12 +164,15 @@ export const translations: Record<Language, Translation> = {
       ctaProjects: "مشاهده پروژه‌ها",
       ctaContact: "ارتباط مستقیم",
       activeWorkTitle: "پروژه‌ها و وضعیت فعلی",
-      luximoTitle: "شرکت هوش‌افزار زمرد (لوکسیمو)",
-      luximoBadge: "فعال در ۱۵+ رستوران",
-      luximoDesc: "پلتفرم ابری اتوماسیون و سفارش‌گیری رستوران با دامنه luximo.ir؛ در حال استفاده توسط بیش از ۱۵ کافه و رستوران مطرح.",
-      darvishkhanTitle: "فروشگاه و آموزشگاه موسیقی درویش‌خان",
+      luximoTitle: "لوکسیمو (هوش‌افزار زمرد)",
+      luximoBadge: "فعال در ۱۵+ مجموعه",
+      luximoDesc: "پلتفرم ابری مدیریت و اتوماسیون رستوران با دامنه luximo.ir.",
+      darvishkhanTitle: "فروشگاه لوازم موسیقی درویش‌خان",
       darvishkhanBadge: "در حال توسعه",
-      darvishkhanDesc: "فروشگاه آنلاین آلات موسیقی و سامانه مدیریت نوبت‌دهی کلاس‌های آموزشگاه درویش‌خان سنندج.",
+      darvishkhanDesc: "فروشگاه آنلاین تخصصی ساز، ادوات و تجهیزات موسیقی در سنندج.",
+      foxloaderTitle: "دانلود منیجر FoxLoader",
+      foxloaderBadge: "در حال توسعه",
+      foxloaderDesc: "دانلود منیجر فوق‌سریع چندنخی با هسته Rust و رابط کاربری Fluent ویندوز ۱۱.",
     },
     about: {
       title: "درباره من",
@@ -206,6 +213,7 @@ export const translations: Record<Language, Translation> = {
       keyFeatures: "ویژگی‌های شاخص",
       techStack: "تکنولوژی‌های استفاده‌شده",
       architecture: "نکات معماری و فنی",
+      confidentialBadge: "سورس‌کد و رابط کاربری محرمانه (NDA)",
     },
     skills: {
       title: "مهارت‌ها و فناوری‌ها",
@@ -314,12 +322,15 @@ export const translations: Record<Language, Translation> = {
       ctaProjects: "Explore Projects",
       ctaContact: "Get in Touch",
       activeWorkTitle: "Current Focus & Deployments",
-      luximoTitle: "Hoosh Afzar Zomorrod (LUXIMO)",
-      luximoBadge: "Live in 15+ Restaurants",
-      luximoDesc: "Cloud restaurant management SaaS at luximo.ir; running actively across 15+ premier cafes and restaurants.",
-      darvishkhanTitle: "Darvish Khan Music Shop & Academy",
+      luximoTitle: "LUXIMO (Hoosh Afzar Zomorrod)",
+      luximoBadge: "Live in 15+ Branches",
+      luximoDesc: "Cloud restaurant management and automation platform at luximo.ir.",
+      darvishkhanTitle: "Darvish Khan Music Instruments Store",
       darvishkhanBadge: "In Development",
-      darvishkhanDesc: "E-commerce platform for musical instruments and course management system for Darvish Khan Academy in Sanandaj.",
+      darvishkhanDesc: "Specialized online store for musical instruments and accessories in Sanandaj.",
+      foxloaderTitle: "FoxLoader Download Manager",
+      foxloaderBadge: "In Development",
+      foxloaderDesc: "Ultra-fast multi-threaded download manager with a Rust core and native Windows 11 Fluent UI.",
     },
     about: {
       title: "About Me",
@@ -360,6 +371,7 @@ export const translations: Record<Language, Translation> = {
       keyFeatures: "Key Highlights",
       techStack: "Tech Stack",
       architecture: "Architecture Overview",
+      confidentialBadge: "Proprietary Source & UI (NDA)",
     },
     skills: {
       title: "Skills & Arsenal",
@@ -468,12 +480,15 @@ export const translations: Record<Language, Translation> = {
       ctaProjects: "دیتنی پڕۆژەکان",
       ctaContact: "پەیوەندیم پێوە بکە",
       activeWorkTitle: "پڕۆژەکان و دۆخی ئێستا",
-      luximoTitle: "کۆمپانیای هۆش‌ئەفزار زومڕود (لوکسیمۆ)",
+      luximoTitle: "لوکسیمۆ (هۆش‌ئەفزار زومڕود)",
       luximoBadge: "چالاک لە ١٥+ چێشتخانە",
-      luximoDesc: "سیستمی بەڕێوەبردنی چێشتخانە لەسەر دۆمەینی luximo.ir؛ چالاک لە پتر لە ١٥ کافێ و ڕێستۆرانی ناودار.",
-      darvishkhanTitle: "فرۆشگا و پەیمانگای مۆسیقای دەروێش‌خان",
+      luximoDesc: "پلاتفۆرمی هەوری بەڕێوەبردنی چێشتخانە لەسەر luximo.ir.",
+      darvishkhanTitle: "فرۆشگای مۆسیقای دەروێش‌خان",
       darvishkhanBadge: "لە پەرەپێداندایە",
-      darvishkhanDesc: "فرۆشگای ئۆنلاینی ئامێری مۆسیقا و سیستمی بەڕێوەبردنی کلاسی مۆسیقای دەروێش‌خانی سنە.",
+      darvishkhanDesc: "فرۆشگای ئۆنلاینی تایبەتی ساز و ئامێرەکانی مۆسیقا لە سنە.",
+      foxloaderTitle: "فۆکس‌لۆدەر (FoxLoader)",
+      foxloaderBadge: "لە پەرەپێداندایە",
+      foxloaderDesc: "داونلۆد مەنەجەری فرەتەنی خێرا بە کرۆکی Rust و ڕووکاری فلوێنت بۆ ویندۆز ١١.",
     },
     about: {
       title: "دەربارەی من",
@@ -514,6 +529,7 @@ export const translations: Record<Language, Translation> = {
       keyFeatures: "تایبەتمەندییە سەرەکییەکان",
       techStack: "تەکنەلۆژیاکان",
       architecture: "نەخشەی ئەندازیاری",
+      confidentialBadge: "کۆد و ڕووکاری پارێزراو (NDA)",
     },
     skills: {
       title: "شارەزایی و تەکنەلۆژیاکان",
@@ -622,12 +638,15 @@ export const translations: Record<Language, Translation> = {
       ctaProjects: "Projekte ansehen",
       ctaContact: "Kontakt aufnehmen",
       activeWorkTitle: "Aktuelle Projekte & Status",
-      luximoTitle: "Hoosh Afzar Zomorrod (LUXIMO)",
-      luximoBadge: "Aktiv in 15+ Restaurants",
-      luximoDesc: "Cloud-SaaS für Restaurantmanagement auf luximo.ir; im operativen Einsatz bei über 15 führenden Gastronomiebetrieben.",
-      darvishkhanTitle: "Musik-Shop & Akademie Darvish Khan",
+      luximoTitle: "LUXIMO (Hoosh Afzar Zomorrod)",
+      luximoBadge: "Aktiv in 15+ Filialen",
+      luximoDesc: "Cloud-Plattform für Restaurantmanagement und Automation auf luximo.ir.",
+      darvishkhanTitle: "Musikinstrumente Darvish Khan",
       darvishkhanBadge: "In Entwicklung",
-      darvishkhanDesc: "Online-Shop für Musikinstrumente und Kursverwaltungssystem für die Darvish-Khan-Akademie in Sanandaj.",
+      darvishkhanDesc: "Spezialisierter Online-Shop für Musikinstrumente und Zubehör in Sanandaj.",
+      foxloaderTitle: "FoxLoader Download-Manager",
+      foxloaderBadge: "In Entwicklung",
+      foxloaderDesc: "Multi-Thread-Download-Manager mit Rust-Engine und nativer Windows-11-Fluent-Oberfläche.",
     },
     about: {
       title: "Über mich",
@@ -668,6 +687,7 @@ export const translations: Record<Language, Translation> = {
       keyFeatures: "Hauptmerkmale",
       techStack: "Technologien",
       architecture: "Architektur & Besonderheiten",
+      confidentialBadge: "Vertraulicher Quellcode & UI (NDA)",
     },
     skills: {
       title: "Fähigkeiten & Technologien",

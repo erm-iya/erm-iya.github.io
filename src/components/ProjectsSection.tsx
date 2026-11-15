@@ -27,6 +27,7 @@ import {
   Layers,
   Sparkles,
   CheckCircle2,
+  Lock,
 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
@@ -160,30 +161,40 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                     <Sparkles className="w-3.5 h-3.5" />
                   </Button>
 
-                  <div className="flex items-center gap-1">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
-                        title={t.projects.viewCode}
-                      >
-                        <GithubIcon className="w-4 h-4" />
-                      </a>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
-                        title={t.projects.liveDemo}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
+                  {project.confidential ? (
+                    <span
+                      className="inline-flex items-center gap-1 text-[11px] font-medium text-amber-700 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-1 rounded-lg"
+                      title={t.projects.confidentialBadge}
+                    >
+                      <Lock className="w-3 h-3 shrink-0" />
+                      <span className="truncate max-w-[130px] sm:max-w-none">{t.projects.confidentialBadge}</span>
+                    </span>
+                  ) : (
+                    <div className="flex items-center gap-1">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
+                          title={t.projects.viewCode}
+                        >
+                          <GithubIcon className="w-4 h-4" />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all"
+                          title={t.projects.liveDemo}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </CardFooter>
               </Card>
             );
@@ -217,6 +228,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
 
             <div className="space-y-6 pt-2">
               
+              {/* Optional Screenshot Preview */}
+              {selectedProject.image && (
+                <div className="w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-md max-h-72 bg-slate-950 flex items-center justify-center">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title[currentLang]}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              )}
+
               {/* Architecture Section */}
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06]">
                 <h4 className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider mb-2 flex items-center gap-2">
@@ -260,23 +282,32 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ currentLang })
                 </div>
               </div>
 
-              {/* Modal Links */}
-              <div className="flex flex-wrap items-center justify-end gap-3 pt-4 border-t border-slate-200 dark:border-white/[0.07]">
-                {selectedProject.githubUrl && (
-                  <a href={selectedProject.githubUrl} target="_blank" rel="noreferrer">
-                    <Button variant="outline" size="sm" className="gap-2">
-                      <GithubIcon className="w-4 h-4" />
-                      <span>{t.projects.viewCode}</span>
-                    </Button>
-                  </a>
-                )}
-                {selectedProject.liveUrl && (
-                  <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer">
-                    <Button size="sm" className="gap-2 bg-teal-600 hover:bg-teal-500 text-white">
-                      <ExternalLink className="w-4 h-4" />
-                      <span>{t.projects.liveDemo}</span>
-                    </Button>
-                  </a>
+              {/* Modal Links & Confidentiality Notice */}
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-200 dark:border-white/[0.07]">
+                {selectedProject.confidential ? (
+                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs w-full">
+                    <Lock className="w-4 h-4 shrink-0" />
+                    <span>{t.projects.confidentialBadge}</span>
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap items-center justify-end gap-3 w-full">
+                    {selectedProject.githubUrl && (
+                      <a href={selectedProject.githubUrl} target="_blank" rel="noreferrer">
+                        <Button variant="outline" size="sm" className="gap-2">
+                          <GithubIcon className="w-4 h-4" />
+                          <span>{t.projects.viewCode}</span>
+                        </Button>
+                      </a>
+                    )}
+                    {selectedProject.liveUrl && (
+                      <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer">
+                        <Button size="sm" className="gap-2 bg-teal-600 hover:bg-teal-500 text-white">
+                          <ExternalLink className="w-4 h-4" />
+                          <span>{t.projects.liveDemo}</span>
+                        </Button>
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
 

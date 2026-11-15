@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentLang }) => {
         </div>
 
         {/* Current Projects & Live Deployments */}
-        <div className="w-full max-w-3xl mx-auto text-start">
+        <div className="w-full max-w-4xl mx-auto text-start">
           <div className="flex items-center gap-2 mb-3 px-1">
             <span className="w-2 h-2 rounded-full bg-teal-500"></span>
             <span className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
@@ -105,20 +105,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentLang }) => {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
             {/* LUXIMO */}
             <a
               href="https://luximo.ir"
               target="_blank"
               rel="noreferrer"
-              className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] hover:border-teal-500/40 transition-all flex items-start gap-3.5 group text-start"
+              className="glass-card p-3.5 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] hover:border-teal-500/40 transition-all flex items-start gap-3 group text-start"
             >
-              <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/50 shrink-0 p-1 flex items-center justify-center">
+              <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/50 shrink-0 p-1 flex items-center justify-center">
                 <img src="/images/luximo.png" alt="LUXIMO" className="w-full h-full object-contain" />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors truncate">
+                <div className="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
                     {t.hero.luximoTitle}
                   </span>
                   <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 border border-emerald-500/25 px-2 py-0.5 rounded-full shrink-0">
@@ -126,20 +126,46 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentLang }) => {
                     {t.hero.luximoBadge}
                   </span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                   {t.hero.luximoDesc}
                 </p>
               </div>
             </a>
 
+            {/* FoxLoader */}
+            <a
+              href="https://github.com/erm-iya/FoxLoader"
+              target="_blank"
+              rel="noreferrer"
+              className="glass-card p-3.5 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] hover:border-teal-500/40 transition-all flex items-start gap-3 group text-start"
+            >
+              <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/50 shrink-0 p-1 flex items-center justify-center">
+                <img src="/images/foxloader.png" alt="FoxLoader" className="w-full h-full object-contain" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors">
+                    {t.hero.foxloaderTitle}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-cyan-700 dark:text-cyan-300 bg-cyan-500/15 border border-cyan-500/25 px-2 py-0.5 rounded-full shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                    {t.hero.foxloaderBadge}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {t.hero.foxloaderDesc}
+                </p>
+              </div>
+            </a>
+
             {/* Darvish Khan */}
-            <div className="glass-card p-4 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] flex items-start gap-3.5 text-start">
-              <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/50 shrink-0 p-1 flex items-center justify-center">
+            <div className="glass-card p-3.5 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] flex items-start gap-3 text-start">
+              <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/50 shrink-0 p-1 flex items-center justify-center">
                 <img src="/images/darvishkhan_sanandaj.png" alt="Darvish Khan" className="w-full h-full object-contain" />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100 truncate">
+                <div className="flex flex-wrap items-center justify-between gap-1 mb-1">
+                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100">
                     {t.hero.darvishkhanTitle}
                   </span>
                   <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-amber-700 dark:text-amber-300 bg-amber-500/15 border border-amber-500/25 px-2 py-0.5 rounded-full shrink-0">
@@ -147,7 +173,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentLang }) => {
                     {t.hero.darvishkhanBadge}
                   </span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                   {t.hero.darvishkhanDesc}
                 </p>
               </div>
